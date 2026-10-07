@@ -1,8 +1,122 @@
 ---
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
+import aboutMemoji from '../assets/memoji-wave.png';
+import workMemoji from '../assets/memoji-macbook.png';
+import contactMemoji from '../assets/memoji-call.png';
 ---
 
 <Layout>
 	<Hero />
+	<div class="section">
+		<!-- about -->
+		<div class="section__info">
+			<div class="section__header">
+				<img class="section__img" src={aboutMemoji.src} />
+				<h1 class="section__title">About</h1>
+			</div>
+			<p class="section__text">I design, code, prototype, animate, test, break, rebuild, and ship cool stuff.</p>
+		</div>
+	</div>
+	<div class="section">
+		<!-- work -->
+		<div class="section__info">
+			<div class="section__header">
+				<img class="section__img" src={workMemoji.src} />
+				<h1 class="section__title">Work</h1>
+			</div>
+			<p class="section__text">Some deep dives and other cool stuff to look at.</p>
+		</div>
+	</div>
+	<div class="section">
+		<!-- contact -->
+		<div class="section__info">
+			<div class="section__header">
+				<img class="section__img" src={contactMemoji.src} />
+				<h1 class="section__title">Contact</h1>
+			</div>
+			<p class="section__text">If you’d like to get in touch, my LinkedIn is below.</p>
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.section {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.section__info {
+		display: flex;
+		flex-direction: column;
+		padding: 0 8px;
+	}
+
+	.section__header {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.section__img {
+		width: 48px;
+		height: 48px;
+		background: white;
+		box-shadow: 0 0 0 1px black, -2px 2px 0 0 black;
+		border-radius: 100%;
+	}
+
+	.section__title {
+		font-size: 48px;
+    line-height: 72px;
+		font-family: var(--font-family-serif);
+		font-style: italic;
+		font-weight: bold;
+		color: black;
+	}
+
+	.section__text {
+		font-size: 24px;
+    line-height: 32px;
+		font-family: var(--font-family-sans);
+		color: rgba(0,0,0,0.5);
+	}
+
+	@media (min-width: 768px) {
+		.section__info {
+			padding: 0;
+		}
+
+    .section__img {
+			width: 56px;
+			height: 56px;
+		}
+
+    .section__title {
+			font-size: 56px;
+			line-height: 80px;
+		}
+
+		.section__text {
+			font-size: 32px;
+			line-height: 48px;
+		}
+  }
+
+  @media (min-width: 1024px) {
+		.section__img {
+			width: 64px;
+			height: 64px;
+		}
+
+    .section__title {
+			font-size: 64px;
+			line-height: 88px;
+		}
+
+		.section__text {
+			font-size: 40px;
+			line-height: 56px;
+		}
+  }
+</style>

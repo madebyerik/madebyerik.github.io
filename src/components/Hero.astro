@@ -9,12 +9,12 @@ import memoji from '../assets/memoji-clouds.png';
 </section>
 
 <style>
-	.hero {
+  .hero {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 9 / 16;
+    min-height: 420px;
     max-height: 720px;
-    min-height: 320px;
     display: flex;
     align-items: center;
   }
@@ -22,61 +22,63 @@ import memoji from '../assets/memoji-clouds.png';
   .hero__background {
     position: absolute;
     inset: 32px;
-    background-image: linear-gradient(to top right, var(--color-pink-100) 60%, var(--color-yellow-100));
+    background-image: linear-gradient(
+      to top right,
+      var(--color-pink-100) 60%,
+      var(--color-yellow-100)
+    );
     border-radius: 32px;
     z-index: -1;
   }
 
   .hero__memoji {
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     z-index: 0;
-    width: 224px;
+    width: 164px;
     object-fit: contain;
-    transform: translate(10%, -10%);
+    transform: translate(10%, -20%);
   }
 
   .hero__text {
-    font-family: var(--font-family-sans);
-    font-size: 64px;
-    line-height: 88px;
-    font-weight: normal;
-    padding: 0 8px;
-    color: rgba(0,0,0,0.5);
     z-index: 1;
-    
+    padding: 0 8px;
+    color: rgb(0 0 0 / 50%);
+    font-family: var(--font-family-sans);
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 72px;
+
     span {
+      color: rgb(0 0 0);
       font-family: var(--font-family-serif);
       font-style: italic;
       font-weight: bold;
-      color: rgba(0,0,0,1);
     }
   }
 
-  /* Phone: use a taller portrait frame */
-  @media (max-width: 1024px) {
+  @media (min-width: 768px) {
+    .hero {
+      aspect-ratio: 4 / 3;
+      min-height: 320px;
+    }
+
+    .hero__memoji {
+      width: 224px;
+      transform: translate(10%, -10%);
+    }
+
     .hero__text {
       font-size: 56px;
       line-height: 80px;
     }
   }
 
-  @media (max-width: 768px) {
-    .hero {
-      aspect-ratio: 9 / 16;
-      min-height: 420px;
-      max-height: 720px;
-    }
-
-    .hero__memoji {
-      width: 164px;
-      transform: translate(10%, -20%);
-    }
-
+  @media (min-width: 1024px) {
     .hero__text {
-      font-size: 48px;
-      line-height: 72px;
+      font-size: 64px;
+      line-height: 88px;
     }
   }
 </style>
