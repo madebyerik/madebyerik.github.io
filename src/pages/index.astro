@@ -1,55 +1,100 @@
 ---
+import { getCollection } from 'astro:content';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
 import aboutMemoji from '../assets/memoji-wave.png';
 import workMemoji from '../assets/memoji-macbook.png';
 import contactMemoji from '../assets/memoji-call.png';
+import Card from '../components/Card.astro';
+import AboutCard from "../components/AboutCard.astro";
+import dribbbleIcon from "../assets/dribbble-icon.svg";
+import figmaIcon from "../assets/figma-icon.svg";
+import githubIcon from "../assets/github-icon.svg";
+import WorkCard from "../components/WorkCard.astro";
+
+const projects = (await getCollection('work'))
+	.sort((a, b) => a.data.index - b.data.index);
 ---
 
 <Layout>
 	<Hero />
-	<div class="section">
-		<!-- about -->
-		<div class="section__info">
-			<div class="section__header">
-				<img class="section__img" src={aboutMemoji.src} />
-				<h1 class="section__title">About</h1>
+	<div class="content">
+		<div class="section">
+			<!-- about -->
+			<div class="section__info">
+				<div class="section__header">
+					<img class="section__img" src={aboutMemoji.src} />
+					<h1 class="section__title">About</h1>
+				</div>
+				<p class="section__text">I design, code, prototype, animate, test, break, rebuild, and ship cool stuff.</p>
 			</div>
-			<p class="section__text">I design, code, prototype, animate, test, break, rebuild, and ship cool stuff.</p>
+			<div class="section__cards section__cards--2x2">
+				<AboutCard
+					href="https://dribbble.com/madebyerik"
+					variant="pink"
+					title="UI/UX"
+					icon={dribbbleIcon.src}
+					skills={[["Wireframing", "Rapid Prototyping", "Mockups", "Redlining"], ["User Flows", "Design Systems", "Design Tokens", "Accessible Design"]]} />
+				<AboutCard
+					href="https://www.figma.com/@madebyerik"
+					variant="purple"
+					title="Design Tools"
+					icon={figmaIcon.src}
+					skills={[["Figma", "Sketch", "Adobe CC", "Maya"], ["Blender", "Framer", "Principle"]]} />
+				<AboutCard
+					href="https://github.com/madebyerik"
+					variant="green"
+					title="Programming"
+					icon={githubIcon.src}
+					skills={[["JavaScript", "TypeScript", "Python", "SQL", "Three", "D3", "HTML", "CSS"], ["Node", "React", "Angular", "Scss/Sass", "Git", "Vite", "Webpack", "Astro"]]} />
+			</div>
 		</div>
-	</div>
-	<div class="section">
-		<!-- work -->
-		<div class="section__info">
-			<div class="section__header">
-				<img class="section__img" src={workMemoji.src} />
-				<h1 class="section__title">Work</h1>
+		<div class="section">
+			<!-- work -->
+			<div class="section__info">
+				<div class="section__header">
+					<img class="section__img" src={workMemoji.src} />
+					<h1 class="section__title">Work</h1>
+				</div>
+				<p class="section__text">Some deep dives and other cool stuff to look at.</p>
 			</div>
-			<p class="section__text">Some deep dives and other cool stuff to look at.</p>
+			<div class="section__cards">
+				{projects.map((project: any) => (
+					<WorkCard project={project} />
+				))}
+			</div>
 		</div>
-	</div>
-	<div class="section">
-		<!-- contact -->
-		<div class="section__info">
-			<div class="section__header">
-				<img class="section__img" src={contactMemoji.src} />
-				<h1 class="section__title">Contact</h1>
+		<div class="section">
+			<!-- contact -->
+			<div class="section__info">
+				<div class="section__header">
+					<img class="section__img" src={contactMemoji.src} />
+					<h1 class="section__title">Contact</h1>
+				</div>
+				<p class="section__text">If you’d like to get in touch, my LinkedIn is below.</p>
 			</div>
-			<p class="section__text">If you’d like to get in touch, my LinkedIn is below.</p>
 		</div>
 	</div>
 </Layout>
 
 <style>
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		padding: 0;
+	}
+	
 	.section {
 		display: flex;
 		flex-direction: column;
+		gap: 16px;
 	}
 
 	.section__info {
 		display: flex;
 		flex-direction: column;
-		padding: 0 8px;
+		padding: 0 16px;
 	}
 
 	.section__header {
@@ -82,9 +127,24 @@ import contactMemoji from '../assets/memoji-call.png';
 		color: rgba(0,0,0,0.5);
 	}
 
+	.section__cards {
+    display: grid;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .section__cards--2x2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
 	@media (min-width: 768px) {
-		.section__info {
-			padding: 0;
+		.content {
+			gap: 64px;
+			padding: 32px 0;
+		}
+
+		.section {
+			gap: 24px;
 		}
 
     .section__img {
@@ -101,9 +161,22 @@ import contactMemoji from '../assets/memoji-call.png';
 			font-size: 32px;
 			line-height: 48px;
 		}
+
+		.section__cards--2x2 {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
   }
 
   @media (min-width: 1024px) {
+		.content {
+			gap: 128px;
+			padding: 88px 0;
+		}
+
+		.section {
+			gap: 32px;
+		}
+
 		.section__img {
 			width: 64px;
 			height: 64px;

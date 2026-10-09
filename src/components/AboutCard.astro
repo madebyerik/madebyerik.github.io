@@ -1,0 +1,69 @@
+---
+import Card from './Card.astro';
+
+interface Props {
+  title: string;
+  icon: string;
+  skills: string[][];
+  href: string;
+  variant?: 'pink' | 'purple' | 'green';
+}
+
+const { title, skills, icon, variant, href } = Astro.props;
+---
+
+<Card {variant} href={href}>
+  <div class="about-card__inner">
+    <div class="about-card__header">
+      <h3 class="about-card__title">{title}</h3>
+      <img src={icon} alt="" class="about-card__icon" />
+    </div>
+    <div class="about-card__content">
+      {skills.map((group) => (
+        <ul class="about-card__skills">
+          {group.map((skill) => <li class="about-card__skill">{skill}</li>)}
+        </ul>
+      ))}
+    </div>
+  </div>
+</Card>
+
+<style>
+  .about-card__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .about-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-card__title {
+    font-family: var(--font-family-serif);
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  .about-card__content {
+    display: flex;
+  }
+
+  .about-card__skills {
+    width: 50%;
+    padding-inline-start: 16px;
+  }
+
+  .about-card__skill {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--font-family-sans);
+    color: black;
+  }
+</style>

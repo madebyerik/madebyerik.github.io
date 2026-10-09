@@ -1,4 +1,5 @@
 ---
+category: Deep Dive
 title: Caffeine
 index: 1
 img: ../../assets/caffeine-placeholder.png

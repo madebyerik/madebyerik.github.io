@@ -1,0 +1,59 @@
+---
+import Card from './Card.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'work'>;
+}
+
+const { data, id } = Astro.props.project;
+---
+
+<Card variant={data.title.toLowerCase()} href={`/work/${id}`}>
+  <div class="work-card__inner">
+    <div class="work-card__left">
+      <span class="work-card__index">{data.index}</span>
+      <div class="work-card__info">
+        <h5 class="work-card__category">{data.category}</h5>
+        <h3 class="work-card__title">{data.title}</h3>
+        <p class="work-card__description">{data.description}</p>
+      </div>
+      <div class="work-card__tags-container">
+        <ul class="work-card__tag-list">
+          {data.tags.map((tag: string) => (
+            <li class="work-card__tag">{tag}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    <div class="work-card__right">
+      <img class="work-card__img" src={data.img.src} alt={data.img_alt} />
+    </div>
+  </div>
+</Card>
+
+<style>
+  .work-card__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .work-card__img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top left;
+    max-width: 400px;
+    box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
+    border-radius: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .work-card__inner {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 32px;
+    }
+  }
+</style>

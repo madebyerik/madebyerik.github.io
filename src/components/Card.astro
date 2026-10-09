@@ -1,0 +1,150 @@
+---
+type Variant = 'pink' | 'purple' | 'green' | 'btwx' | 'caffeine' | 'twitch' | 'figma';
+
+interface Props {
+  variant?: Variant;
+  href?: string;
+}
+
+const { variant = 'pink', href } = Astro.props;
+const Tag = href ? 'a' : 'article'
+---
+
+<Tag class:list={['card', `card--${variant}`]} href={href}>
+  <div class="card__inner">
+    <slot />
+  </div>
+</Tag>
+
+<style>
+	.card {
+    display: block;
+		background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+		border-radius: 32px;
+		padding: 24px;
+    text-decoration: none;
+	}
+
+	.card__inner {
+		position: relative;
+		width: 100%;
+		transform: translate(4px, -4px);
+		border-radius: 16px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			box-shadow: 0 0 0 1px black;
+			border-radius: 16px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			transform: translate(-12px, 12px);
+			border-radius: 16px;
+			z-index: -1;
+		}
+	}
+
+  .card--pink {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to top right,
+          var(--color-pink-100) 60%,
+          var(--color-yellow-100)
+        );
+      }
+    }
+  }
+
+  .card--purple {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-blue-100),
+          var(--color-purple-100),
+          var(--color-pink-100)
+        );
+      }
+    }
+  }
+
+  .card--green {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-indigo-100),
+          var(--color-cyan-100),
+          var(--color-teal-100)
+        );
+      }
+    }
+  }
+
+  .card--btwx {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-blue-100),
+          var(--color-purple-100),
+          var(--color-red-100)
+        );
+      }
+    }
+  }
+
+  .card--caffeine {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-red-100),
+          var(--color-pink-100),
+          var(--color-purple-100)
+        );
+      }
+    }
+  }
+
+  .card--twitch {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-green-100),
+          var(--color-blue-100),
+          var(--color-purple-100)
+        );
+      }
+    }
+  }
+
+  .card--figma {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-red-100),
+          var(--color-yellow-100),
+          var(--color-green-100)
+        );
+      }
+    }
+  }
+
+	@media (min-width: 768px) {
+
+  }
+
+  @media (min-width: 1024px) {
+
+  }
+</style>

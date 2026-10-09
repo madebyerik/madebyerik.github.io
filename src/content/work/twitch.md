@@ -1,4 +1,5 @@
 ---
+category: Deep Dive
 title: Twitch
 index: 2
 img: ../../assets/twitch-placeholder.webp

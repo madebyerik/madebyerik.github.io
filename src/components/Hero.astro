@@ -17,6 +17,7 @@ import memoji from '../assets/memoji-clouds.png';
     max-height: 720px;
     display: flex;
     align-items: center;
+    overflow-x: hidden;
   }
 
   .hero__background {
@@ -43,7 +44,7 @@ import memoji from '../assets/memoji-clouds.png';
 
   .hero__text {
     z-index: 1;
-    padding: 0 8px;
+    padding: 0 16px;
     color: rgb(0 0 0 / 50%);
     font-family: var(--font-family-sans);
     font-size: 48px;
@@ -70,6 +71,7 @@ import memoji from '../assets/memoji-clouds.png';
     }
 
     .hero__text {
+      padding: 0 8px;
       font-size: 56px;
       line-height: 80px;
     }

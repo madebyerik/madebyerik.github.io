@@ -1,4 +1,5 @@
 ---
+category: Deep Dive
 title: Figma
 index: 3
 img: ../../assets/figma-placeholder.webp
