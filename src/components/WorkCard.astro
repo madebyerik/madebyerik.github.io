@@ -7,12 +7,26 @@ interface Props {
 }
 
 const { data, id } = Astro.props.project;
+const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
 ---
 
 <Card variant={data.title.toLowerCase()} href={`/work/${id}`}>
   <div class="work-card__inner">
     <div class="work-card__left">
-      <span class="work-card__index">{data.index}</span>
+      <svg
+        class="work-card__index"
+        viewBox="0 0 100 32"
+        role="img"
+        aria-label={`Project ${formattedIndex}`}>
+        <text class="work-card__index-text--mobile" x="98" y="16"
+          text-anchor="end" dominant-baseline="middle">
+          {formattedIndex}
+        </text>
+        <text class="work-card__index-text--desktop" x="2" y="16"
+          text-anchor="start" dominant-baseline="middle">
+          {formattedIndex}
+        </text>
+      </svg>
       <div class="work-card__info">
         <h5 class="work-card__category">{data.category}</h5>
         <h3 class="work-card__title">{data.title}</h3>
@@ -36,24 +50,172 @@ const { data, id } = Astro.props.project;
   .work-card__inner {
     display: flex;
     flex-direction: column;
-    padding: 16px;
-    gap: 16px;
+    padding: 24px;
+    gap: 24px;
+    min-width: 0;
+  }
+
+  .work-card__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 24px;
+    min-width: 0;
+    width: auto;
+  }
+
+  .work-card__index {
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 32px;
+    overflow: visible;
+    top: 20px;
+    right: 24px;
+  }
+
+  .work-card__index text {
+    font-family: var(--font-family-serif);
+    font-size: 32px;
+    font-weight: 700;
+    fill: white;
+    stroke: black;
+    stroke-width: 2px;
+    paint-order: stroke fill;
+    stroke-linejoin: round;
+    filter: drop-shadow(-1px 1px 0px rgba(0, 0, 0, 1));
+  }
+
+  .work-card__index-text--desktop {
+    display: none;
+  }
+
+  .work-card__category {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(0,0,0,0.75);
+    padding-bottom: 8px;
+  }
+
+  .work-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .work-card__title {
+    font-size: 48px;
+    line-height: 56px;
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+  }
+
+  .work-card__description {
+    font-size: 20px;
+    line-height: 32px;
+    font-family: var(--font-family-sans);
+    color: rgba(0,0,0,0.5);
   }
 
   .work-card__img {
     aspect-ratio: 3 / 4;
     object-fit: cover;
     object-position: top left;
-    max-width: 400px;
+    width: 100%;
+    max-width: 600px;
     box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
     border-radius: 16px;
+    min-width: 0;
+  }
+
+  .work-card__tags-container {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .work-card__tag-list {
+    list-style-type: none;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    gap: 16px 12px;
+    min-width: 0;
+  }
+
+  .work-card__tag {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: var(--font-family-sans);
+    color: black;
+    background: white;
+    padding: 0 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px black, -2px 3px 0 black;
   }
 
   @media (min-width: 768px) {
     .work-card__inner {
       flex-direction: row;
       justify-content: space-between;
-      padding: 32px;
+      padding: 16px;
+      gap: clamp(24px, 4vw, 48px);
+      /* gap: 32px; */
+    }
+
+    .work-card__left {
+      flex: 1 1 0;
+      min-width: 0;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .work-card__right {
+      flex: 0 1 clamp(240px, 38vw, 360px);
+      width: auto;
+      min-width: 0;
+    }
+
+    .work-card__img {
+      max-width: none;
+    }
+
+    .work-card__index {
+      position: inherit;
+      top: auto;
+      right: auto;
+    }
+
+    .work-card__index-text--mobile {
+      display: none;
+    }
+
+    .work-card__index-text--desktop {
+      display: block;
+    }
+
+    .work-card__category {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .work-card__inner {
+      padding: 24px;
+      gap: 64px;
+    }
+
+    .work-card__right {
+      flex-basis: 400px;
     }
   }
 </style>

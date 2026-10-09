@@ -34,7 +34,7 @@ const projects = (await getCollection('work'))
 					variant="pink"
 					title="UI/UX"
 					icon={dribbbleIcon.src}
-					skills={[["Wireframing", "Rapid Prototyping", "Mockups", "Redlining"], ["User Flows", "Design Systems", "Design Tokens", "Accessible Design"]]} />
+					skills={[["Wireframing", "Prototyping", "Mockups", "Redlining"], ["User Flows", "Design Systems", "Design Tokens", "Accessibility"]]} />
 				<AboutCard
 					href="https://www.figma.com/@madebyerik"
 					variant="purple"
@@ -88,7 +88,7 @@ const projects = (await getCollection('work'))
 	.section {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		gap: 32px;
 	}
 
 	.section__info {
@@ -139,12 +139,12 @@ const projects = (await getCollection('work'))
 
 	@media (min-width: 768px) {
 		.content {
-			gap: 64px;
-			padding: 32px 0;
+			gap: 48px;
+			padding: 24px 0;
 		}
 
 		.section {
-			gap: 24px;
+			gap: 48px;
 		}
 
     .section__img {
@@ -167,14 +167,14 @@ const projects = (await getCollection('work'))
 		}
   }
 
-  @media (min-width: 1024px) {
+  /* @media (min-width: 1024px) {
 		.content {
-			gap: 128px;
-			padding: 88px 0;
+			gap: 64px;
+			padding: 32px 0;
 		}
 
 		.section {
-			gap: 32px;
+			gap: 64px;
 		}
 
 		.section__img {
@@ -191,5 +191,5 @@ const projects = (await getCollection('work'))
 			font-size: 40px;
 			line-height: 56px;
 		}
-  }
+  } */
 </style>
