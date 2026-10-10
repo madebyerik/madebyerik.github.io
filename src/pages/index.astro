@@ -11,6 +11,8 @@ import figmaIcon from "../assets/figma-icon.svg";
 import githubIcon from "../assets/github-icon.svg";
 import WorkCard from "../components/WorkCard.astro";
 import ContactCard from '../components/ContactCard.astro';
+import Grid from '../components/Grid.astro';
+
 
 const projects = (await getCollection('work'))
 	.sort((a, b) => a.data.index - b.data.index);
@@ -28,7 +30,7 @@ const projects = (await getCollection('work'))
 				</div>
 				<p class="section__text">I design, code, prototype, animate, test, break, rebuild, and ship cool stuff.</p>
 			</div>
-			<div class="section__cards section__cards--2x2">
+			<Grid columns={2}>
 				<AboutCard
 					href="https://dribbble.com/madebyerik"
 					variant="pink"
@@ -47,7 +49,7 @@ const projects = (await getCollection('work'))
 					title="Programming"
 					icon={githubIcon.src}
 					skills={[["JavaScript", "TypeScript", "Python", "SQL", "Three", "D3", "HTML", "CSS"], ["Node", "React", "Angular", "Scss/Sass", "Git", "Vite", "Webpack", "Astro"]]} />
-			</div>
+			</Grid>
 		</div>
 		<div class="section">
 			<!-- work -->
@@ -58,11 +60,11 @@ const projects = (await getCollection('work'))
 				</div>
 				<p class="section__text">Some deep dives and other cool stuff to look at.</p>
 			</div>
-			<div class="section__cards">
+			<Grid>
 				{projects.map((project: any) => (
 					<WorkCard project={project} />
 				))}
-			</div>
+			</Grid>
 		</div>
 		<div class="section">
 			<!-- contact -->
@@ -74,9 +76,9 @@ const projects = (await getCollection('work'))
 				<p class="section__text">If you’d like to get in touch, my LinkedIn is below.</p>
 			</div>
 		</div>
-		<div class="section__cards section__cards--2x2">
+		<Grid columns={2}>
 			<ContactCard />
-		</div>
+		</Grid>
 	</div>
 </Layout>
 
@@ -130,22 +132,6 @@ const projects = (await getCollection('work'))
 		color: rgba(0,0,0,0.5);
 	}
 
-	.section__cards {
-    display: grid;
-    width: 100%;
-    gap: 24px;
-  }
-
-  .section__cards--2x2 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
-	@media (min-width: 1024px) {
-		.section__cards {
-			gap: 32px;
-		}
-	}
-
 	@media (min-width: 768px) {
 		.content {
 			gap: 48px;
@@ -169,10 +155,6 @@ const projects = (await getCollection('work'))
 		.section__text {
 			font-size: 32px;
 			line-height: 48px;
-		}
-
-		.section__cards--2x2 {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
   }
 
