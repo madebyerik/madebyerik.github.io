@@ -1,0 +1,81 @@
+---
+import type { WorkId } from "./Card.astro";
+
+interface Props {
+  variant: WorkId;
+  index: string;
+}
+
+const { variant, index } = Astro.props;
+---
+
+<div class:list={['index', `index--${variant}`]}>
+  <svg
+    class="index__svg"
+    viewBox="0 0 56 56"
+    role="img"
+    aria-label={`Project ${index}`}>
+    <text x="28" y="28"
+      text-anchor="middle" dominant-baseline="middle">
+      {index}
+    </text>
+  </svg>
+</div>
+
+<style>
+	.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+		width: 56px;
+		height: 56px;
+		border-radius: 16px;
+	}
+
+  .index__svg {
+    display: block;
+    width: 56px;
+    height: 56px;
+    overflow: visible;
+  }
+
+  .index__svg text {
+    font-family: var(--font-family-serif);
+    font-size: 32px;
+    font-weight: 700;
+    fill: white;
+    stroke: black;
+    stroke-width: 2px;
+    paint-order: stroke fill;
+    stroke-linejoin: round;
+    filter: drop-shadow(-1px 1px 0px rgba(0, 0, 0, 1));
+  }
+
+  .index--btwx {
+    background-image: var(--gradient-btwx);
+  }
+
+  .index--caffeine {
+    background-image: var(--gradient-caffeine);
+  }
+
+  .index--twitch {
+    background-image: var(--gradient-twitch);
+  }
+
+  .index--figma {
+    background-image: var(--gradient-figma);
+  }
+
+  @media (min-width: 768px) {
+    .index {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    
+  }
+</style>

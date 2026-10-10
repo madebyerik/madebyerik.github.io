@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import WorkDetailHeader from '../../components/WorkDetailHeader.astro'
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -19,5 +20,46 @@ const { Content } = await render(entry);
 ---
 
 <Layout>
-	<h1>{entry.data.title}</h1>
+	<div class="wrapper">
+		<WorkDetailHeader project={entry} />
+		<div class="content">
+			<Content />
+		</div>
+	</div>
 </Layout>
+
+<style>
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content {
+		background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+		border-radius: 32px;
+		padding: 16px;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+  @media (min-width: 768px) {
+    .content {
+			background: white;
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+			border-radius: 32px;
+			padding: 24px;
+		}
+  }
+
+  @media (min-width: 1024px) {
+    .content {
+			background: white;
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+			border-radius: 32px;
+			padding: 32px;
+		}
+  }
+</style>

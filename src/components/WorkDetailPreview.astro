@@ -1,0 +1,63 @@
+---
+import type { WorkId } from "./Card.astro";
+
+interface Props {
+  variant: WorkId;
+  src: string;
+  alt?: string;
+}
+
+const { variant, src, alt } = Astro.props;
+---
+
+<div class:list={['preview', `preview--${variant}`]}>
+  <img class="preview__img" src={src} alt={alt} />
+</div>
+
+<style>
+	.preview {
+    padding: 24px 24px 28px 28px;
+    border-radius: 32px;
+  }
+
+  .preview__img {
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top left;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
+    border-radius: 16px;
+    min-width: 0;
+  }
+
+  .preview--btwx {
+    background-image: var(--gradient-btwx);
+  }
+
+  .preview--caffeine {
+    background-image: var(--gradient-caffeine);
+  }
+
+  .preview--twitch {
+    background-image: var(--gradient-twitch);
+  }
+
+  .preview--figma {
+    background-image: var(--gradient-figma);
+  }
+
+  @media (min-width: 768px) {
+    .preview {
+      padding: 32px 32px 36px 36px;
+    }
+    
+    .preview__img {
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    
+  }
+</style>

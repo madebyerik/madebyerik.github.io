@@ -11,10 +11,10 @@ const projects = (await getCollection('work'))
 ---
 
 <Layout>
-	<div class="work">
-		<div class="work__hero">
-			<img class="work__memoji" src={workMemoji.src} />
-			<h1 class="work__header">Work</h1>
+	<div class="wrapper">
+		<div class="header">
+			<img class="header__memoji" src={workMemoji.src} />
+			<h1 class="header__title">Work</h1>
 		</div>
 		<Grid>
 			{projects.map((project: any) => (
@@ -25,14 +25,14 @@ const projects = (await getCollection('work'))
 </Layout>
 
 <style>
-	.work {
+	.wrapper {
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
 		padding: 32px 0;
 	}
 
-	.work__hero {
+	.header {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -41,7 +41,7 @@ const projects = (await getCollection('work'))
 		padding: 32px 0;
 	}
 
-	.work__header {
+	.header__title {
 		font-size: 48px;
     line-height: 56px;
 		font-family: var(--font-family-serif);
@@ -50,7 +50,7 @@ const projects = (await getCollection('work'))
 		color: black;
 	}
 
-	.work__memoji {
+	.header__memoji {
 		width: 96px;
 		height: 96px;
 		background: white;
@@ -59,12 +59,12 @@ const projects = (await getCollection('work'))
 	}
 
 	@media (min-width: 768px) {
-		.work__memoji {
+		.header__memoji {
 			width: 112px;
 			height: 112px;
 		}
 
-    .work__header {
+    .header__title {
 			font-size: 56px;
 			line-height: 64px;
 		}

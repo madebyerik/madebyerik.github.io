@@ -1,0 +1,76 @@
+---
+import type { WorkId } from "./Card.astro";
+
+interface Props {
+  variant: WorkId;
+  tags: string[];
+}
+
+const { variant, tags } = Astro.props;
+---
+
+<div>
+  <div class:list={['tags', `tags--${variant}`]}>
+    <ul class="tags__list">
+      {tags.map((tag: string) => (
+        <li class="tags__tag">{tag}</li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<style>
+  .tags {
+    display: inline-block;
+		padding: 12px 12px 14px 14px;
+		border-radius: 32px;
+  }
+
+  .tags__list {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 16px 12px;
+    min-width: 0;
+  }
+
+  .tags__tag {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: var(--font-family-sans);
+    color: black;
+    background: white;
+    padding: 0 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px black, -2px 3px 0 black;
+  }
+
+  .tags--btwx {
+    background-image: var(--gradient-btwx);
+  }
+
+  .tags--caffeine {
+    background-image: var(--gradient-caffeine);
+  }
+
+  .tags--twitch {
+    background-image: var(--gradient-twitch);
+  }
+
+  .tags--figma {
+    background-image: var(--gradient-figma);
+  }
+
+  @media (min-width: 768px) {
+    .tags {
+      padding: 16px 16px 18px 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+  }
+</style>

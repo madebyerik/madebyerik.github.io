@@ -1,0 +1,61 @@
+---
+import type { WorkId } from "./Card.astro";
+
+interface Props {
+  variant: WorkId;
+}
+
+const { variant } = Astro.props;
+---
+
+<div class:list={['back', `back--${variant}`]}>
+  <a class="back__link" href="/work">← Work</a>
+</div>
+
+<style>
+	.back {
+		display: flex;
+		align-items: center;
+		padding: 0 12px 0 14px;
+		border-radius: 32px;
+	}
+
+	.back__link {
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 32px;
+    font-family: var(--font-family-sans);
+    color: black;
+    background: white;
+    padding: 0 12px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 1px black, -2px 3px 0 black;
+		text-decoration: none;
+	}
+
+  .back--btwx {
+    background-image: var(--gradient-btwx);
+  }
+
+  .back--caffeine {
+    background-image: var(--gradient-caffeine);
+  }
+
+  .back--twitch {
+    background-image: var(--gradient-twitch);
+  }
+
+  .back--figma {
+    background-image: var(--gradient-figma);
+  }
+
+  @media (min-width: 768px) {
+    .back {
+      padding: 0 16px 0 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    
+  }
+</style>

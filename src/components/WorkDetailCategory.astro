@@ -1,0 +1,55 @@
+---
+import type { WorkId } from "./Card.astro";
+
+interface Props {
+  variant: WorkId;
+  category: string;
+}
+
+const { variant, category } = Astro.props;
+---
+
+<div>
+  <span class:list={['category', `category--${variant}`]}>{category}</span>
+</div>
+
+<style>
+  .category {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(0,0,0,0.75);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent;
+  }
+
+  .category--btwx {
+    background-image: var(--gradient-btwx-sat);
+  }
+
+  .category--caffeine {
+    background-image: var(--gradient-caffeine-sat);
+  }
+
+  .category--twitch {
+    background-image: var(--gradient-twitch-sat);
+  }
+
+  .category--figma {
+    background-image: var(--gradient-figma-sat);
+  }
+
+  @media (min-width: 768px) {
+    .category {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+  }
+</style>
