@@ -133,12 +133,18 @@ const projects = (await getCollection('work'))
 	.section__cards {
     display: grid;
     width: 100%;
-    gap: 16px;
+    gap: 24px;
   }
 
   .section__cards--2x2 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+
+	@media (min-width: 1024px) {
+		.section__cards {
+			gap: 32px;
+		}
+	}
 
 	@media (min-width: 768px) {
 		.content {
