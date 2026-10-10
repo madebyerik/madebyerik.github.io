@@ -1,5 +1,6 @@
 ---
-type Variant = 'pink' | 'purple' | 'green' | 'btwx' | 'caffeine' | 'twitch' | 'figma';
+export type WorkId = 'btwx' | 'caffeine' | 'twitch' | 'figma';
+type Variant = 'blue' | 'pink' | 'purple' | 'green' | WorkId;
 
 interface Props {
   variant?: Variant;
@@ -50,6 +51,19 @@ const Tag = href ? 'a' : 'article'
 			z-index: -1;
 		}
 	}
+
+  .card--blue {
+    .card__inner {
+      &::before {
+        background-image: linear-gradient(
+          to bottom right,
+          var(--color-cyan-100),
+          var(--color-blue-100),
+          var(--color-violet-100)
+        );
+      }
+    }
+  }
 
   .card--pink {
     .card__inner {

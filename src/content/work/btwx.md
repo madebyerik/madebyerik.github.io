@@ -4,7 +4,7 @@ title: Btwx
 index: 0
 img: ../../assets/btwx-placeholder.webp
 img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+description: Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc.
 tags:
   - Tag 1
   - Tag 2

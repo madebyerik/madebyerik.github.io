@@ -1,6 +1,6 @@
 ---
 category: Deep Dive
-title: Twitch
+title: Twitch.tv
 index: 2
 img: ../../assets/twitch-placeholder.webp
 img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

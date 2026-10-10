@@ -1,0 +1,88 @@
+---
+import Card from './Card.astro';
+import aboutMemoji from '../assets/memoji-wave.png';
+import linkedinIcon from "../assets/linkedin-icon.svg";
+---
+
+<Card variant='blue' href="https://www.linkedin.com/in/erikmyers">
+  <div class="contact-card__inner">
+    <div class="contact-card__header">
+      <img src={linkedinIcon.src} alt="" class="contact-card__icon" />
+    </div>
+    <div class="contact-card__content">
+      <img src={aboutMemoji.src} alt="" class="contact-card__memoji" />
+      <h3 class="contact-card__name">Erik Myers</h3>
+      <p class="contact-card__title">Product Designer</p>
+    </div>
+  </div>
+</Card>
+
+<style>
+  .contact-card__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    aspect-ratio: 3/4;
+  }
+
+  .contact-card__header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .contact-card__title {
+    font-family: var(--font-family-serif);
+    font-size: 24px;
+    line-height: 32px;
+    color: black;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  .contact-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 2;
+    padding-bottom: 32px;
+  }
+
+  .contact-card__memoji {
+    width: 164px;
+    height: 164px;
+    background: white;
+    box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
+    border-radius: 100%;
+  }
+
+  .contact-card__name {
+    font-size: 32px;
+    line-height: 40px;
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+    text-align: center;
+    padding-top: 32px;
+  }
+
+  .contact-card__title {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: var(--font-family-sans);
+    font-weight: normal;
+    font-style: normal;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .contact-card__memoji {
+      width: 224px;
+      height: 224px;
+    }
+  }
+</style>

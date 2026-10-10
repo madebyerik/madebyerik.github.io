@@ -1,6 +1,6 @@
 ---
 category: Deep Dive
-title: Figma
+title: Figma Plugins
 index: 3
 img: ../../assets/figma-placeholder.webp
 img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

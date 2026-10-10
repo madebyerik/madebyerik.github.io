@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import type { WorkId } from "./Card.astro";
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -10,7 +11,7 @@ const { data, id } = Astro.props.project;
 const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
 ---
 
-<Card variant={data.title.toLowerCase()} href={`/work/${id}`}>
+<Card variant={id as WorkId} href={`/work/${id}`}>
   <div class="work-card__inner">
     <div class="work-card__left">
       <svg
@@ -127,7 +128,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     object-fit: cover;
     object-position: top left;
     width: 100%;
-    max-width: 600px;
+    max-width: 800px;
     box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
     border-radius: 16px;
     min-width: 0;

@@ -1,6 +1,6 @@
 ---
 category: Deep Dive
-title: Caffeine
+title: Caffeine.tv
 index: 1
 img: ../../assets/caffeine-placeholder.png
 img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.

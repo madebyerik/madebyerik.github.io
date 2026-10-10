@@ -5,12 +5,12 @@ import Layout from '../layouts/Layout.astro';
 import aboutMemoji from '../assets/memoji-wave.png';
 import workMemoji from '../assets/memoji-macbook.png';
 import contactMemoji from '../assets/memoji-call.png';
-import Card from '../components/Card.astro';
 import AboutCard from "../components/AboutCard.astro";
 import dribbbleIcon from "../assets/dribbble-icon.svg";
 import figmaIcon from "../assets/figma-icon.svg";
 import githubIcon from "../assets/github-icon.svg";
 import WorkCard from "../components/WorkCard.astro";
+import ContactCard from '../components/ContactCard.astro';
 
 const projects = (await getCollection('work'))
 	.sort((a, b) => a.data.index - b.data.index);
@@ -73,6 +73,9 @@ const projects = (await getCollection('work'))
 				</div>
 				<p class="section__text">If you’d like to get in touch, my LinkedIn is below.</p>
 			</div>
+		</div>
+		<div class="section__cards section__cards--2x2">
+			<ContactCard />
 		</div>
 	</div>
 </Layout>
