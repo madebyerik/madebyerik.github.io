@@ -16,15 +16,11 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     <div class="work-card__left">
       <svg
         class="work-card__index"
-        viewBox="0 0 100 32"
+        viewBox="0 0 32 32"
         role="img"
         aria-label={`Project ${formattedIndex}`}>
-        <text class="work-card__index-text--mobile" x="98" y="16"
-          text-anchor="end" dominant-baseline="middle">
-          {formattedIndex}
-        </text>
-        <text class="work-card__index-text--desktop" x="2" y="16"
-          text-anchor="start" dominant-baseline="middle">
+        <text x="16" y="16"
+          text-anchor="middle" dominant-baseline="middle">
           {formattedIndex}
         </text>
       </svg>
@@ -51,8 +47,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__inner {
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    gap: 24px;
+    gap: 22px;
     min-width: 0;
   }
 
@@ -60,7 +55,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 24px;
+    gap: 12px;
     min-width: 0;
     width: auto;
   }
@@ -68,16 +63,16 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__index {
     position: absolute;
     display: block;
-    width: 100px;
+    width: 32px;
     height: 32px;
     overflow: visible;
-    top: 20px;
+    top: 18px;
     right: 24px;
   }
 
   .work-card__index text {
     font-family: var(--font-family-serif);
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 700;
     fill: white;
     stroke: black;
@@ -97,8 +92,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     font-family: var(--font-family-serif);
     font-weight: bold;
     font-style: italic;
-    color: rgba(0,0,0,0.75);
-    padding-bottom: 8px;
+    color: rgba(0,0,0,0.70);
   }
 
   .work-card__info {
@@ -108,8 +102,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   }
 
   .work-card__title {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 40px;
+    line-height: 48px;
     font-family: var(--font-family-serif);
     font-weight: bold;
     font-style: italic;
@@ -117,8 +111,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   }
 
   .work-card__description {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 30px;
     font-family: var(--font-family-sans);
     color: rgba(0,0,0,0.5);
   }
@@ -129,7 +123,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     object-position: top left;
     width: 100%;
     max-width: 800px;
-    box-shadow: 0 0 0 1px black, -4px 4px 0 0 black;
+    box-shadow: 0 0 0 1px black, -3px 3px 0 0 black;
     border-radius: 16px;
     min-width: 0;
   }
@@ -137,15 +131,18 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__tags-container {
     min-width: 0;
     width: 100%;
+    overflow: scroll;
+    padding: 3px;
+    border-radius: 16px;
   }
 
   .work-card__tag-list {
     list-style-type: none;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
     padding: 0;
     display: flex;
-    gap: 16px 12px;
+    gap: 12px 8px;
     min-width: 0;
   }
 
@@ -159,14 +156,14 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     background: white;
     padding: 0 12px;
     border-radius: 16px;
-    box-shadow: 0 0 0 1px black, -2px 3px 0 black;
+    box-shadow: 0 0 0 1px black, -1.5px 2.5px 0 black;
   }
 
   @media (min-width: 768px) {
     .work-card__inner {
       flex-direction: row;
       justify-content: space-between;
-      gap: clamp(24px, 4vw, 48px);
+      gap: clamp(24px, 4vw, 32px);
       /* gap: 32px; */
     }
 
@@ -195,28 +192,36 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
       right: auto;
     }
 
-    .work-card__index-text--mobile {
-      display: none;
-    }
-
-    .work-card__index-text--desktop {
-      display: block;
-    }
-
     .work-card__category {
       padding-bottom: 0;
+    }
+
+    .work-card__index text {
+      font-size: 32px;
     }
   }
 
   @media (min-width: 1024px) {
     .work-card__inner {
-      padding: 24px;
       gap: 64px;
-      padding: 32px;
     }
 
     .work-card__right {
       flex-basis: 400px;
+    }
+
+    .work-card__title {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    .work-card__description {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .work-card__index text {
+      font-size: 36px;
     }
   }
 </style>

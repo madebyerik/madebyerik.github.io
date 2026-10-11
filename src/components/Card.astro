@@ -23,21 +23,23 @@ const Tag = href ? 'a' : 'article'
 		background: white;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
 		border-radius: 32px;
-		padding: 22px 18px;
+		padding: 16px;
     text-decoration: none;
+    min-width: 0;
 	}
 
 	.card__inner {
 		position: relative;
 		width: 100%;
 		transform: translate(6px, -6px);
-		border-radius: 24px;
+		border-radius: 20px;
+    padding: 24px;
 
 		&::after {
 			content: '';
 			position: absolute;
 			inset: 0;
-			box-shadow: 0 0 0 1px black;
+			box-shadow: 0 0 0 1px inset black;
 			border-radius: 24px;
       pointer-events: none;
 		}
@@ -46,8 +48,8 @@ const Tag = href ? 'a' : 'article'
 			content: '';
 			position: absolute;
 			inset: 0;
-			transform: translate(-12px, 12px);
-			border-radius: 24px;
+			transform: translate(-10px, 10px);
+			border-radius: 20px;
 			z-index: -1;
 		}
 	}
@@ -69,8 +71,9 @@ const Tag = href ? 'a' : 'article'
     .card__inner {
       &::before {
         background-image: linear-gradient(
-          to top right,
-          var(--color-pink-100) 60%,
+          to top left,
+          var(--color-pink-100),
+          var(--color-orange-100),
           var(--color-yellow-100)
         );
       }
@@ -81,7 +84,7 @@ const Tag = href ? 'a' : 'article'
     .card__inner {
       &::before {
         background-image: linear-gradient(
-          to bottom right,
+          to top left,
           var(--color-blue-100),
           var(--color-purple-100),
           var(--color-pink-100)
@@ -136,19 +139,33 @@ const Tag = href ? 'a' : 'article'
   }
 
 	@media (min-width: 768px) {
-    
+    .card {
+      padding: 20px 20px 16px 16px;
+    }
+
+    .card__inner {
+      padding: 28px;
+
+      transform: translate(8px, -8px);
+
+      &::before {
+        transform: translate(-12px, 12px);
+      }
+    }
   }
 
   @media (min-width: 1024px) {
     .card {
-      padding: 24px;
+      padding: 24px 24px 20px 20px;
     }
 
     .card__inner {
-      transform: translate(8px, -8px);
+      padding: 32px;
+
+      transform: translate(10px, -10px);
 
       &::before {
-        transform: translate(-16px, 16px);
+        transform: translate(-14px, 14px);
       }
     }
   }

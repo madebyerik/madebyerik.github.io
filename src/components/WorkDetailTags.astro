@@ -11,11 +11,13 @@ const { variant, tags } = Astro.props;
 
 <div>
   <div class:list={['tags', `tags--${variant}`]}>
-    <ul class="tags__list">
-      {tags.map((tag: string) => (
-        <li class="tags__tag">{tag}</li>
-      ))}
-    </ul>
+    <div class="tags__container">
+      <ul class="tags__list">
+        {tags.map((tag: string) => (
+          <li class="tags__tag">{tag}</li>
+        ))}
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -24,12 +26,21 @@ const { variant, tags } = Astro.props;
     display: inline-block;
 		padding: 12px 12px 14px 14px;
 		border-radius: 32px;
+    max-width: 100%;
+  }
+
+  .tags__container {
+    min-width: 0;
+    width: 100%;
+    overflow: scroll;
+    padding: 3px;
+    border-radius: 16px;
   }
 
   .tags__list {
     display: flex;
     list-style-type: none;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 0;
     gap: 16px 12px;
     min-width: 0;
@@ -45,7 +56,7 @@ const { variant, tags } = Astro.props;
     background: white;
     padding: 0 12px;
     border-radius: 16px;
-    box-shadow: 0 0 0 1px black, -2px 3px 0 black;
+    box-shadow: 0 0 0 1px black, -1.5px 2.5px 0 black;
   }
 
   .tags--btwx {

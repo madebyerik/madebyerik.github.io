@@ -226,20 +226,20 @@
 
   --gradient-caffeine: linear-gradient(
     to bottom right,
-    var(--color-red-100),
+    var(--color-orange-100),
     var(--color-pink-100),
     var(--color-purple-100)
   );
 
   --gradient-twitch: linear-gradient(
-    to bottom right,
+    to top left,
     var(--color-green-100),
     var(--color-blue-100),
     var(--color-purple-100)
   );
 
   --gradient-figma: linear-gradient(
-    to bottom right,
+    to top left,
     var(--color-red-100),
     var(--color-yellow-100),
     var(--color-green-100)
@@ -254,20 +254,20 @@
 
   --gradient-caffeine-sat: linear-gradient(
     to bottom right,
-    var(--color-red-700),
+    var(--color-orange-700),
     var(--color-pink-700),
     var(--color-purple-700)
   );
 
   --gradient-twitch-sat: linear-gradient(
-    to bottom right,
+    to top left,
     var(--color-green-700),
     var(--color-blue-700),
     var(--color-purple-700)
   );
 
   --gradient-figma-sat: linear-gradient(
-    to bottom right,
+    to top left,
     var(--color-red-700),
     var(--color-yellow-700),
     var(--color-green-700)

@@ -21,7 +21,6 @@ import linkedinIcon from "../assets/linkedin-icon.svg";
   .contact-card__inner {
     display: flex;
     flex-direction: column;
-    padding: 24px;
     gap: 16px;
     aspect-ratio: 3/4;
   }
@@ -51,8 +50,8 @@ import linkedinIcon from "../assets/linkedin-icon.svg";
   }
 
   .contact-card__memoji {
-    width: 164px;
-    height: 164px;
+    width: 132px;
+    height: 132px;
     background: white;
     box-shadow: 0 0 0 2px black, -4px 4px 0 0 black;
     border-radius: 100%;
@@ -66,7 +65,7 @@ import linkedinIcon from "../assets/linkedin-icon.svg";
     font-style: italic;
     color: black;
     text-align: center;
-    padding-top: 32px;
+    padding-top: 24px;
   }
 
   .contact-card__title {
@@ -79,10 +78,11 @@ import linkedinIcon from "../assets/linkedin-icon.svg";
     text-align: center;
   }
 
+  @media (min-width: 768px) {
+    
+  }
+
   @media (min-width: 1024px) {
-    .contact-card__memoji {
-      width: 224px;
-      height: 224px;
-    }
+    
   }
 </style>
