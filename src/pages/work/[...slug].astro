@@ -21,19 +21,16 @@ const { Content } = await render(entry);
 
 <Layout>
 	<div class="wrapper">
-		<WorkDetailHeader project={entry} />
-		<div class="content">
-			<Content />
+		<div class="stack">
+			<WorkDetailHeader project={entry} />
+			<div class="content">
+				<Content />
+			</div>
 		</div>
 	</div>
 </Layout>
 
 <style>
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-	}
-
 	.content {
 		background: white;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.1);

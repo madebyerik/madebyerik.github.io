@@ -14,23 +14,7 @@ import Nav from '../components/Nav.astro';
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<div class="layout">
-			<Nav />
-			<slot />
-		</div>
+		<Nav />
+		<slot />
 	</body>
 </html>
-
-<style>
-	.layout {
-		max-width: 1024px;
-		margin: 0 auto;
-		padding: 0;
-	}
-
-	@media (min-width: 768px) {
-		.layout {
-			padding: 0 8px;
-		}
-	}
-</style>

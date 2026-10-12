@@ -15,24 +15,26 @@ const isCurrentPage = (href: string) => {
 ---
 
 <nav class="nav" aria-label="Primary navigation">
-  <button
-    class="nav__menu"
-    type="button"
-    aria-expanded="false"
-    aria-controls="main-menu">
-    <img src={menuIcon.src} />
-  </button>
-  <a class="nav__logo" href="/">
-    <img src={logo.src} />
-  </a>
-  <div id="main-menu" class="nav__links">
-    {
-      textLinks.map((link) => (
-        <a class={isCurrentPage(link.href) ? 'active' : null} href={link.href}>
-          {link.label}
-        </a>
-      ))
-    }
+  <div class="nav__inner">
+    <button
+      class="nav__menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="main-menu">
+      <img src={menuIcon.src} />
+    </button>
+    <a class="nav__logo" href="/">
+      <img src={logo.src} />
+    </a>
+    <div id="main-menu" class="nav__links">
+      {
+        textLinks.map((link) => (
+          <a class={isCurrentPage(link.href) ? 'active' : null} href={link.href}>
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
   </div>
 </nav>
 
@@ -50,15 +52,25 @@ const isCurrentPage = (href: string) => {
 <style>
   .nav {
     position: sticky;
+    top: 0px;
+    z-index: 999;
+    grid-template-columns: 
+      [gutter-left] 0 
+      [content] 100%
+      [gutter-right] 0;
+    justify-content: center;
+  }
+
+  .nav > * {
+    grid-column: content;
+  }
+
+  .nav__inner {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 0 10px 0 rgba(0,0,0,0.05);
+    background: rgba(255,255,255,1);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-    padding: 8px;
-    background: rgba(255,255,255,1);
-    /* backdrop-filter: blur(20px) saturate(180%) brightness(110%); 
-    -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(110%); */
-    top: 0px;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
-    z-index: 999;
+    padding: 0.5rem;
   }
 
   .nav__menu {
@@ -97,15 +109,15 @@ const isCurrentPage = (href: string) => {
 
   .nav__links.is-open {
     display: grid;
-    padding: 8px 0 0 0;
+    padding: 0.5rem 0 0 0;
   }
 
   .nav__links a {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     color: black;
     text-align: center;
     font-family: var(--font-family-sans);
@@ -119,10 +131,18 @@ const isCurrentPage = (href: string) => {
     font-style: italic;
 	}
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     .nav {
-      top: 8px;
-      border-radius: 32px;
+      padding-top: 0.5rem;
+      display: grid;
+      grid-template-columns: 
+        [gutter-left] var(--gutter) 
+        [content] minmax(0, 64rem)
+        [gutter-right] var(--gutter);
+    }
+
+    .nav__inner {
+      border-radius: 2rem;
     }
 
     .nav__menu {
@@ -134,11 +154,14 @@ const isCurrentPage = (href: string) => {
       align-self: center;
       grid-column: 1;
       grid-row: 1;
-      gap: 1rem;
     }
 
     .nav__links a {
-      padding: 4px 12px;
+      padding: 0.25rem 0.75rem;
     }
+  }
+
+  @media (min-width: 64rem) {
+    
   }
 </style>

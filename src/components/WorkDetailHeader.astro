@@ -47,8 +47,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
 	.header {
     display: flex;
     flex-direction: column;
-    padding: 24px 16px;
-    gap: 24px;
+    padding: 1.5rem 1rem;
+    gap: clamp(1.5rem, 4vw, 4rem);
     min-width: 0;
   }
 
@@ -56,9 +56,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 24px;
+    gap: 1.5rem;
     min-width: 0;
-    width: auto;
   }
 
 	.header__nav {
@@ -69,12 +68,12 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .header__info {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .header__title {
-    font-size: 48px;
-    line-height: 56px;
+    font-size: 3rem;
+    line-height: 3.5rem;
     font-family: var(--font-family-serif);
     font-weight: bold;
     font-style: italic;
@@ -82,8 +81,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   }
 
   .header__description {
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 1.25rem;
+    line-height: 2rem;
     font-family: var(--font-family-sans);
     color: rgba(0,0,0,0.5);
   }
@@ -91,34 +90,22 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   @media (min-width: 768px) {
     .header {
       flex-direction: row;
-      justify-content: space-between;
-      gap: clamp(24px, 4vw, 48px);
-			padding: 32px 8px;
+			padding: 2rem 0;
     }
 
     .header__left {
-      flex: 1 1 0;
-      min-width: 0;
-      width: auto;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .header__right {
-      flex: 0 1 clamp(240px, 38vw, 360px);
-      width: auto;
-      min-width: 0;
+      flex: 1;
     }
   }
 
   @media (min-width: 1024px) {
-    .header {
-      gap: 64px;
-    }
-
-    .header__right {
-      flex-basis: 400px;
-    }
+    
   }
 </style>

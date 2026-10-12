@@ -14,12 +14,13 @@ const { columns = 1 } = Astro.props;
   .grid {
     display: grid;
     width: 100%;
-    gap: 16px;
+    gap: 1rem;
+    align-items: start;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     .grid {
-      gap: 24px;
+      gap: 1.5rem;
     }
 
     .grid--2 {
@@ -27,9 +28,9 @@ const { columns = 1 } = Astro.props;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     .grid {
-      gap: 32px;
+      gap: 2rem;
     }
   }
 </style>

@@ -10,47 +10,38 @@ import memoji from '../assets/memoji-clouds.png';
 
 <style>
   .hero {
+    --gutter: clamp(1rem, 3vw, 2rem);
     position: relative;
     width: 100%;
-    aspect-ratio: 9 / 16;
-    min-height: 420px;
-    max-height: 720px;
     display: flex;
     align-items: center;
-    overflow-x: hidden;
+    aspect-ratio: 9 / 16;
+    min-height: 26rem;
+    max-height: 45rem;
+    overflow: clip;
   }
 
   .hero__background {
     position: absolute;
-    inset: 32px;
-    background-image: linear-gradient(
+    inset: var(--gutter);
+    z-index: -1;
+    border-radius: var(--radius);
+    background: linear-gradient(
       to bottom right,
       var(--color-pink-100) 50%,
       var(--color-orange-100),
       var(--color-yellow-100)
     );
     border-radius: 32px;
-    z-index: -1;
-  }
-
-  .hero__memoji {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    width: 164px;
-    object-fit: contain;
-    transform: translate(10%, -20%);
   }
 
   .hero__text {
     z-index: 1;
-    padding: 0 16px;
     color: rgb(0 0 0 / 50%);
     font-family: var(--font-family-sans);
-    font-size: 48px;
+    font-size: clamp(2.75rem, 3.8vw + 1.7rem, 4rem);
     font-weight: normal;
-    line-height: 72px;
+    line-height: 1.33;
 
     span {
       color: rgb(0 0 0);
@@ -60,28 +51,25 @@ import memoji from '../assets/memoji-clouds.png';
     }
   }
 
-  @media (min-width: 768px) {
+  .hero__memoji {
+    position: absolute;
+    right: clamp(-1.25rem, -2vw, -0.25rem);
+    bottom: clamp(-1.25rem, -3vw, -0.5rem);
+    z-index: 0;
+    width: clamp(10.25rem, 22vw, 16rem);
+    max-width: 48%;
+    object-fit: contain;
+  }
+
+  @media (min-width: 48rem) {
     .hero {
       aspect-ratio: 4 / 3;
-      min-height: 320px;
-    }
-
-    .hero__memoji {
-      width: 224px;
-      transform: translate(10%, -10%);
-    }
-
-    .hero__text {
-      padding: 0 8px;
-      font-size: 56px;
-      line-height: 80px;
+      min-height: 40rem;
+      max-height: 45rem;
     }
   }
 
-  @media (min-width: 1024px) {
-    .hero__text {
-      font-size: 64px;
-      line-height: 88px;
-    }
+  @media (min-width: 64rem) {
+    
   }
 </style>
