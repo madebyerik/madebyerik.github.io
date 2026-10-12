@@ -217,60 +217,88 @@
   --color-neutral-900: oklch(20.5% 0 none);
   --color-neutral-950: oklch(14.5% 0 none);
 
-  --gradient-btwx: linear-gradient(
+  --gradient-btwx-100: linear-gradient(
     to bottom right,
     var(--color-blue-100),
     var(--color-purple-100),
     var(--color-red-100)
   );
 
-  --gradient-caffeine: linear-gradient(
+  --gradient-caffeine-100: linear-gradient(
     to bottom right,
     var(--color-orange-100),
     var(--color-pink-100),
     var(--color-purple-100)
   );
 
-  --gradient-twitch: linear-gradient(
+  --gradient-twitch-100: linear-gradient(
     to top left,
     var(--color-green-100),
     var(--color-blue-100),
     var(--color-purple-100)
   );
 
-  --gradient-figma: linear-gradient(
+  --gradient-figma-100: linear-gradient(
     to top left,
     var(--color-red-100),
     var(--color-yellow-100),
     var(--color-green-100)
   );
 
-  --gradient-btwx-sat: linear-gradient(
+  --gradient-btwx-200: linear-gradient(
     to bottom right,
-    var(--color-blue-700),
-    var(--color-purple-700),
-    var(--color-red-700)
+    var(--color-blue-200),
+    var(--color-purple-200),
+    var(--color-red-200)
   );
 
-  --gradient-caffeine-sat: linear-gradient(
+  --gradient-caffeine-200: linear-gradient(
     to bottom right,
-    var(--color-orange-700),
-    var(--color-pink-700),
-    var(--color-purple-700)
+    var(--color-orange-200),
+    var(--color-pink-200),
+    var(--color-purple-200)
   );
 
-  --gradient-twitch-sat: linear-gradient(
+  --gradient-twitch-200: linear-gradient(
     to top left,
-    var(--color-green-700),
-    var(--color-blue-700),
-    var(--color-purple-700)
+    var(--color-green-200),
+    var(--color-blue-200),
+    var(--color-purple-200)
   );
 
-  --gradient-figma-sat: linear-gradient(
+  --gradient-figma-200: linear-gradient(
     to top left,
-    var(--color-red-700),
-    var(--color-yellow-700),
-    var(--color-green-700)
+    var(--color-red-200),
+    var(--color-yellow-200),
+    var(--color-green-200)
+  );
+
+  --gradient-btwx-800: linear-gradient(
+    to bottom right,
+    var(--color-blue-800),
+    var(--color-purple-800),
+    var(--color-red-800)
+  );
+
+  --gradient-caffeine-800: linear-gradient(
+    to bottom right,
+    var(--color-orange-800),
+    var(--color-pink-800),
+    var(--color-purple-800)
+  );
+
+  --gradient-twitch-800: linear-gradient(
+    to top left,
+    var(--color-green-800),
+    var(--color-blue-800),
+    var(--color-purple-800)
+  );
+
+  --gradient-figma-800: linear-gradient(
+    to top left,
+    var(--color-red-800),
+    var(--color-yellow-800),
+    var(--color-green-800)
   );
 
 	/* Shadows */
@@ -315,7 +343,8 @@ body {
 }
 
 body {
-	font-family: var(--font-body);
+	font-family: var(--font-family-sans);
+  color: black;
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
   background-color: var(--color-neutral-50);
@@ -329,6 +358,38 @@ body {
 *::before {
 	box-sizing: border-box;
 	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.1;
+	font-family: var(--font-family-serif);
+	font-weight: 600;
+	color: black;
+  font-style: italic;
+}
+
+h1 {
+	font-size: var(--text-5xl);
+}
+
+h2 {
+	font-size: var(--text-4xl);
+}
+
+h3 {
+	font-size: var(--text-3xl);
+}
+
+h4 {
+	font-size: var(--text-2xl);
+}
+
+h5 {
+	font-size: var(--text-xl);
 }
 
 /* .wrapper {
