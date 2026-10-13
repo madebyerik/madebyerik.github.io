@@ -334,7 +334,7 @@
 	--theme-transition: 0.2s ease-in-out;
 
   /* Spacing */
-  --gutter: clamp(0.75rem, 4vw, 3rem);
+  --gutter: clamp(0.75rem, 2vw, 3rem);
 }
 
 html,
@@ -348,8 +348,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.5;
   background-color: var(--color-neutral-50);
-  background-image: radial-gradient(circle, rgba(0,0,0,0.05) 2px, transparent 2px);
-  background-size: 24px 24px;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.05) 0.125rem, transparent 0.125rem);
+  background-size: 1.5rem 1.5rem;
   background-position: 0 0; 
 }
 
@@ -391,11 +391,6 @@ h4 {
 h5 {
 	font-size: var(--text-xl);
 }
-
-/* .wrapper {
-  max-width: 1024px;
-  margin: 0 auto;
-} */
 
 .wrapper {
   display: grid;

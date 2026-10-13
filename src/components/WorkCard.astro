@@ -47,7 +47,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__inner {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 1.375rem;
     min-width: 0;
   }
 
@@ -55,7 +55,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: 12px;
+    gap: 0.75rem;
     min-width: 0;
     width: auto;
   }
@@ -63,16 +63,16 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__index {
     position: absolute;
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     overflow: visible;
-    top: 18px;
-    right: 24px;
+    top: 1.125rem;
+    right: 1.5rem;
   }
 
   .work-card__index text {
     font-family: var(--font-family-serif);
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     fill: white;
     stroke: black;
@@ -87,8 +87,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   }
 
   .work-card__category {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-family: var(--font-family-serif);
     font-weight: bold;
     font-style: italic;
@@ -98,12 +98,12 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   .work-card__info {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .work-card__title {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 2.5rem;
+    line-height: 3rem;
     font-family: var(--font-family-serif);
     font-weight: bold;
     font-style: italic;
@@ -111,8 +111,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
   }
 
   .work-card__description {
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
     font-family: var(--font-family-sans);
     color: rgba(0,0,0,0.5);
   }
@@ -124,7 +124,7 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     width: 100%;
     max-width: 800px;
     box-shadow: 0 0 0 1px black, -3px 3px 0 0 black;
-    border-radius: 16px;
+    border-radius: 1rem;
     min-width: 0;
   }
 
@@ -132,8 +132,8 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     min-width: 0;
     width: 100%;
     overflow: scroll;
-    padding: 3px;
-    border-radius: 16px;
+    padding: 0.1875rem;
+    border-radius: 1rem;
   }
 
   .work-card__tag-list {
@@ -142,28 +142,28 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     width: 100%;
     padding: 0;
     display: flex;
-    gap: 12px 8px;
+    gap: 0.75rem 0.5rem;
     min-width: 0;
   }
 
   .work-card__tag {
     flex: 0 0 auto;
     white-space: nowrap;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 2rem;
     font-family: var(--font-family-sans);
     color: black;
     background: white;
-    padding: 0 12px;
-    border-radius: 16px;
+    padding: 0 0.75rem;
+    border-radius: 1rem;
     box-shadow: 0 0 0 1px black, -1.5px 2.5px 0 black;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     .work-card__inner {
       flex-direction: row;
       justify-content: space-between;
-      gap: clamp(24px, 4vw, 32px);
+      gap: clamp(1.5rem, 4vw, 2rem);
       /* gap: 32px; */
     }
 
@@ -197,13 +197,13 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     }
 
     .work-card__index text {
-      font-size: 32px;
+      font-size: 2rem;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     .work-card__inner {
-      gap: 64px;
+      gap: 4rem;
     }
 
     .work-card__right {
@@ -211,17 +211,17 @@ const formattedIndex = String(Number(data.index) + 1).padStart(2, '0');
     }
 
     .work-card__title {
-      font-size: 48px;
-      line-height: 56px;
+      font-size: 3rem;
+      line-height: 3.5rem;
     }
 
     .work-card__description {
-      font-size: 20px;
-      line-height: 32px;
+      font-size: 1.25rem;
+      line-height: 2rem;
     }
 
     .work-card__index text {
-      font-size: 36px;
+      font-size: 2.25rem;
     }
   }
 </style>

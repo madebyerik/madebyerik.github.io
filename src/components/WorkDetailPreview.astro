@@ -16,8 +16,8 @@ const { variant, src, alt } = Astro.props;
 
 <style>
 	.preview {
-    padding: 24px 24px 28px 28px;
-    border-radius: 32px;
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+    border-radius: 2rem;
   }
 
   .preview__img {
@@ -27,7 +27,7 @@ const { variant, src, alt } = Astro.props;
     width: 100%;
     max-width: 800px;
     box-shadow: 0 0 0 1px black, -3px 3px 0 0 black;
-    border-radius: 16px;
+    border-radius: 1rem;
     min-width: 0;
   }
 
@@ -47,9 +47,9 @@ const { variant, src, alt } = Astro.props;
     background-image: var(--gradient-figma-200);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48rem) {
     .preview {
-      padding: 32px 32px 36px 36px;
+      padding: 32px 32px 32px 36px;
     }
     
     .preview__img {
@@ -57,7 +57,7 @@ const { variant, src, alt } = Astro.props;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 64rem) {
     
   }
 </style>

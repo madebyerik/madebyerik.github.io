@@ -12,7 +12,7 @@ interface Props {
 const { title, skills, icon, variant, href } = Astro.props;
 ---
 
-<Card {variant} href={href}>
+<Card {variant} href={href} target="_blank">
   <div class="about-card__inner">
     <div class="about-card__header">
       <h3 class="about-card__title">{title}</h3>
@@ -32,8 +32,7 @@ const { title, skills, icon, variant, href } = Astro.props;
   .about-card__inner {
     display: flex;
     flex-direction: column;
-    /* padding: 24px; */
-    gap: 16px;
+    gap: 1rem;
   }
 
   .about-card__header {
@@ -44,8 +43,8 @@ const { title, skills, icon, variant, href } = Astro.props;
 
   .about-card__title {
     font-family: var(--font-family-serif);
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     color: black;
     font-style: italic;
     font-weight: normal;
@@ -57,12 +56,12 @@ const { title, skills, icon, variant, href } = Astro.props;
 
   .about-card__skills {
     width: 50%;
-    padding-inline-start: 16px;
+    padding-inline-start: 1rem;
   }
 
   .about-card__skill {
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 1rem;
+    line-height: 1.875rem;
     font-family: var(--font-family-sans);
     color: black;
     list-style-image: url('data:image/svg+xml,<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3.5" cy="4.5" r="3.5" fill="black"/><circle cx="4.5" cy="3.5" r="3" fill="white" stroke="black"/></svg>');
