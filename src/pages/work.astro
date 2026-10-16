@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import workMemoji from '../assets/memoji-macbook.png';
 import WorkCard from "../components/WorkCard.astro";
 import Grid from '../components/Grid.astro';
+import Retro from '../components/98.astro';
 
 
 const projects = (await getCollection('work'))
@@ -21,6 +22,7 @@ const projects = (await getCollection('work'))
 				{projects.map((project: any) => (
 					<WorkCard project={project} />
 				))}
+				<Retro />
 			</Grid>
 		</div>
 	</div>
