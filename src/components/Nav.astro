@@ -36,6 +36,13 @@ const isCurrentPage = (href: string) => {
       }
     </div>
   </div>
+  <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+    <filter id="liquid-refraction">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="4" result="blurredNoise" />      
+      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="25" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
 </nav>
 
 <script>
@@ -66,8 +73,14 @@ const isCurrentPage = (href: string) => {
   }
 
   .nav__inner {
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 0 10px 0 rgba(0,0,0,0.05);
-    background: rgba(255,255,255,1);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px) url(#liquid-refraction);
+    -webkit-backdrop-filter: blur(16px) url(#liquid-refraction);
+    box-shadow: 
+      0 0px 10px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 0, 0, 0.1),
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      inset 0 -2px 10px rgba(255, 255, 255, 0.1);
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     padding: 0.5rem;
