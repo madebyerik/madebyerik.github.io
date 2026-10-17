@@ -36,8 +36,25 @@ const { Content } = await render(entry);
     box-shadow: 0 0 0 1px rgba(0,0,0,0.1); */
 		border-radius: 2rem;
 		/* padding: 0 0.75rem; */
-		margin: 0 auto;
+		/* margin: 0 auto;
+		max-width: 720px; */
+	}
+
+	.prose :global(p),
+	.prose :global(ul),
+	.prose :global(ol),
+	.prose :global(h1),
+  .prose :global(h2),
+  .prose :global(h3),
+	.prose :global(h4),
+	.prose :global(h5),
+	.prose :global(h6),
+	.prose :global(pre),
+	.prose :global(code),
+	.prose :global(blockquote) {
 		max-width: 720px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.prose :global(p),
@@ -86,7 +103,7 @@ const { Content } = await render(entry);
     color: transparent;
 
 		> :global(p) {
-			font-size: clamp(1.25rem, 1.0000rem + 0.95vw, 1.75rem);
+			font-size: clamp(1.5rem, 1.0000rem + 0.95vw, 2rem);
   		line-height: 1.5;
 			margin-block: 2rem;
 		}
@@ -130,6 +147,7 @@ const { Content } = await render(entry);
 		padding: 1.5rem 1.5rem 1.5rem 1.65rem;
 		border-radius: 1.5rem;
 		margin-block: 2rem;
+		max-width: 100%;
 	}
 
   .prose :global(img) {
@@ -142,19 +160,19 @@ const { Content } = await render(entry);
   }
 
 	.prose--btwx :global(p):has(img) {
-    background: var(--gradient-btwx-100);
+    background: var(--gradient-btwx-200);
   }
 
 	.prose--caffeine :global(p):has(img) {
-    background: var(--gradient-caffeine-100);
+    background: var(--gradient-caffeine-200);
   }
 
 	.prose--twitch :global(p):has(img) {
-    background: var(--gradient-twitch-100);
+    background: var(--gradient-twitch-200);
   }
 
 	.prose--figma :global(p):has(img) {
-    background: var(--gradient-figma-100);
+    background: var(--gradient-figma-200);
   }
 
 	.prose--btwx :global(blockquote),
@@ -209,8 +227,27 @@ const { Content } = await render(entry);
   }
 
   @media (min-width: 64rem) {
-    .prose {
-			/* padding: 0 2rem; */
+    .prose :global(h1),
+		.prose :global(h2),
+		.prose :global(h3) {
+			margin-block: 2.5rem;
+		}
+
+		.prose :global(p):has(img) {
+			margin-block: 3rem;
+		}
+
+		.prose :global(blockquote) {
+			> :global(p) {
+				margin-block: 3rem;
+			}
+		}
+
+		.prose :global(p),
+		.prose :global(ul),
+		.prose :global(ol),
+		.prose :global(pre) {
+			margin-block: 2rem;
 		}
   }
 </style>
