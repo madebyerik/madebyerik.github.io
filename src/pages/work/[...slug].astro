@@ -32,32 +32,33 @@ const { Content } = await render(entry);
 
 <style>
 	.prose {
-		background: white;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+		/* background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); */
 		border-radius: 2rem;
-		padding: 0.75rem;
+		/* padding: 0 0.75rem; */
+		margin: 0 auto;
+		max-width: 720px;
 	}
 
 	.prose :global(p),
 	.prose :global(ul),
 	.prose :global(ol) {
-		font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+		font-size: clamp(1rem, 0.85rem + 0.6vw, 1.25rem);
   	line-height: 1.5;
 	}
 
 	.prose :global(h1),
   .prose :global(h2),
   .prose :global(h3) {
-    line-height: 1.15;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    line-height: 1.25;
+		margin-block: 1.5rem;
   }
 
   .prose :global(p),
   .prose :global(ul),
   .prose :global(ol),
   .prose :global(pre) {
-    margin-block: 1.25rem;
+    margin-block: 1.5rem;
   }
 
   .prose :global(code) {
@@ -75,9 +76,9 @@ const { Content } = await render(entry);
 
   .prose :global(blockquote) {
 		position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 		font-family: var(--font-family-serif);
-		font-weight: bold;
+		font-weight: normal;
 		font-style: italic;
 		background-clip: text;
     -webkit-background-clip: text;
@@ -85,8 +86,9 @@ const { Content } = await render(entry);
     color: transparent;
 
 		> :global(p) {
-			font-size: clamp(1.25rem, 1.0000rem + 0.95vw, 2.0rem);
+			font-size: clamp(1.25rem, 1.0000rem + 0.95vw, 1.75rem);
   		line-height: 1.5;
+			margin-block: 2rem;
 		}
     
 		&:before {
@@ -95,7 +97,7 @@ const { Content } = await render(entry);
 			left: 0;
 			top: 0;
 			height: 100%;
-			width: 0.5rem;
+			width: 0.25rem;
 			border-radius: 0.25rem;
 			background: red;
 		}
@@ -127,6 +129,7 @@ const { Content } = await render(entry);
 	.prose :global(p):has(img) {
 		padding: 1.5rem 1.5rem 1.5rem 1.65rem;
 		border-radius: 1.5rem;
+		margin-block: 2rem;
 	}
 
   .prose :global(img) {
@@ -192,7 +195,7 @@ const { Content } = await render(entry);
 
   @media (min-width: 48rem) {
     .prose {
-			padding: 1.5rem;
+			/* padding: 0 1.5rem; */
 		}
 
 		.prose :global(p):has(img) {
@@ -201,13 +204,13 @@ const { Content } = await render(entry);
 		}
 
 		.prose :global(blockquote) {
-			padding-left: 2rem;
+			padding-left: 1.5rem;
 		}
   }
 
   @media (min-width: 64rem) {
     .prose {
-			padding: 2rem;
+			/* padding: 0 2rem; */
 		}
   }
 </style>
