@@ -13,29 +13,57 @@ tags:
   - Tag 5
 ---
 
-# Level-one heading
+## Turning live programming into creator-led experiences
 
-## Level-two heading
+Caffeine was a social broadcasting platform built around live, real-time interaction. Initially, broadcasters on web and iOS could stream only with their webcams. An exclusive content partnership with Fox introduced premium sports and entertainment—and an opportunity to expand what creators could do on the platform.
 
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+As design lead for Live Host, I worked directly with the CEO, engineering, and design to help broadcasters bring Fox programming into their streams and add their own commentary.
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+> **The opportunity** \
+> Give creators a meaningful role in the content—turning a live event into a show of their own.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+![Live host broadcast](../../assets/caffeine-7.png)
 
-![image placeholder](../../assets/caffeine-placeholder.png)
+## The challenge
 
-### Level-three heading
+The partnership brought content to Caffeine. Live Host needed to give creators a way to participate in it.
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+The central design question was how to bring premium programming into a broadcast while keeping the creator’s presence and perspective central to the experience.
 
-### Level-three heading
+Hosts also had to operate the interface while performing. They were following the event, reacting, and speaking to viewers simultaneously. Timing, latency, and simplicity were fundamental to making the experience work.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+## Designing for real-time participation
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+I explored multiple interaction models for layering programming over a webcam feed, balancing expressive control with the demands of broadcasting live.
 
-#### Level-four heading
+Daily engineering stand-ups kept the work grounded in real-time performance constraints. This close collaboration helped me evaluate technical feasibility as the interactions developed and work through tradeoffs quickly.
 
-- We noted this
-- And also this other point
+Weekly design critiques with the CEO sharpened the product direction. I presented concepts, defended decisions, and iterated based on feedback. That cadence required a clear connection between the broader vision and the details of each interaction.
+
+> **A principle for live design** \
+> An interaction has to work at the moment it matters—while the event keeps moving.
+
+![Live host broadcast selection](../../assets/caffeine-6.png)
+
+## Helping creators plan ahead
+
+I also designed a programming guide that helped broadcasters plan future shows around upcoming content.
+
+This extended the experience beyond the moment of going live. Creators could look ahead at programming and consider where their commentary and perspective could fit, connecting immediate participation with longer-term intent.
+
+![Live host programming guide](../../assets/caffeine-3.png)
+
+## What it made possible
+
+Live Host enabled a new class of creator-driven broadcasts. Hosts could bring Fox content into their streams and contribute real-time commentary, helping unlock the creative value of the partnership.
+
+It expanded broadcasting on Caffeine beyond webcam-only streaming and established a foundation for richer live participation.
+
+> **The outcome** \
+> The event gave people something to watch. The host gave them someone to watch it with.
+
+## What I learned
+
+Live Host reinforced how deeply timing shapes usability. In a live experience, even a small interaction competes with the broadcaster’s attention. Simplicity helps creators stay focused on the event and their audience.
+
+The project also strengthened how I collaborate across disciplines. Daily work with engineering grounded the design in technical realities, while regular critiques with the CEO pushed me to articulate a clear vision and a strong rationale for every interaction.

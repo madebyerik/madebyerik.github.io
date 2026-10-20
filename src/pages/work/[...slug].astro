@@ -64,6 +64,20 @@ const { Content } = await render(entry);
   	line-height: 1.5;
 	}
 
+	/* .prose :global(ul),
+	.prose :global(ol) {
+		padding-inline-start: 2rem;
+	}
+
+	.prose :global(ul) :global(li),
+	.prose :global(ol) :global(li) {
+		padding-left: 0.5rem;
+	} */
+
+	/* .prose :global(ul) :global(li) {
+		list-style-image: url('data:image/svg+xml,<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3.5" cy="4.5" r="3.5" fill="black"/><circle cx="4.5" cy="3.5" r="3" fill="white" stroke="black"/></svg>');
+	} */
+
 	.prose :global(h1),
   .prose :global(h2),
   .prose :global(h3) {
@@ -157,6 +171,7 @@ const { Content } = await render(entry);
 		height: auto;
 		box-shadow: 0 0 0 1px black, -3px 3px 0 0 black;
     border-radius: 1rem;
+		background: rgba(0,0,0,0.75);
   }
 
 	.prose--btwx :global(p):has(img) {
@@ -175,12 +190,16 @@ const { Content } = await render(entry);
     background: var(--gradient-figma-200);
   }
 
+	.prose--next :global(p):has(img) {
+    background: var(--gradient-next-200);
+  }
+
 	.prose--btwx :global(blockquote),
 	.prose--btwx :global(a):not(:has(*)) {
 		background-image: var(--gradient-btwx-800);
 
 		&:before {
-			background: var(--gradient-btwx-100);
+			background: var(--gradient-btwx-200);
 		}
 	}
 
@@ -189,7 +208,7 @@ const { Content } = await render(entry);
 		background-image: var(--gradient-caffeine-800);
 
 		&:before {
-			background: var(--gradient-caffeine-100);
+			background: var(--gradient-caffeine-200);
 		}
 	}
 
@@ -198,7 +217,7 @@ const { Content } = await render(entry);
 		background-image: var(--gradient-twitch-800);
 
 		&:before {
-			background: var(--gradient-twitch-100);
+			background: var(--gradient-twitch-200);
 		}
 	}
 
@@ -207,7 +226,16 @@ const { Content } = await render(entry);
 		background-image: var(--gradient-figma-800);
 
 		&:before {
-			background: var(--gradient-figma-100);
+			background: var(--gradient-figma-200);
+		}
+	}
+
+	.prose--next :global(blockquote),
+	.prose--next :global(a):not(:has(*)) {
+		background-image: var(--gradient-next-800);
+
+		&:before {
+			background: var(--gradient-next-200);
 		}
 	}
 

@@ -1,5 +1,5 @@
 ---
-export type WorkId = 'btwx' | 'caffeine' | 'twitch' | 'figma';
+export type WorkId = 'btwx' | 'caffeine' | 'twitch' | 'figma' | 'next';
 type Variant = 'blue' | 'pink' | 'purple' | 'green' | WorkId;
 
 interface Props {
@@ -135,6 +135,14 @@ const Tag = href ? 'a' : 'article';
     .card__inner {
       &::before {
         background-image: var(--gradient-figma-100);
+      }
+    }
+  }
+
+  .card--next {
+    .card__inner {
+      &::before {
+        background-image: var(--gradient-next-100);
       }
     }
   }

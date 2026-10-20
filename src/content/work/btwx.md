@@ -2,7 +2,7 @@
 category: Deep Dive
 title: Btwx
 index: 0
-img: ../../assets/btwx-17.png
+img: ../../assets/btwx-3.png
 img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 description: Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc.
 tags:
@@ -65,11 +65,11 @@ The result is a workflow with two distinct kinds of decisions. First, define the
 
 That separation provides room for choreography. A delay can offset one change from another. Different durations can let some properties finish sooner. Easing can change the character of a transition without changing its endpoints.
 
-![Tween Interface](../../assets/btwx-2.png)
+![Tween interface](../../assets/btwx-2.png)
 
 ![Tween handles](../../assets/btwx-3.png)
 
-![Easing Controls](../../assets/btwx-4.png)
+![Easing controls](../../assets/btwx-4.png)
 
 ## Motion without a different destination
 
@@ -79,7 +79,7 @@ Wiggle tweens use the same general controls as regular tweens, with an additiona
 
 The distinction expands what the state-based model can express. A transition can include both movement toward a new state and variation around a property that remains the same across artboards.
 
-![Wiggle Tween](../../assets/btwx-6.png)
+![Wiggle tween](../../assets/btwx-6.png)
 
 ## Treating appearance and content as animatable properties
 
@@ -89,9 +89,9 @@ Typography also participates in the model. Font size, font weight, letterspacing
 
 This breadth lets a prototype communicate changes in visual treatment as well as movement. A transition can involve an element's geometry, its surface, and its content, with individual property controls shaping how those changes relate.
 
-![Text Tween](../../assets/btwx-7.png)
+![Text tween](../../assets/btwx-7.png)
 
-![Scramble Text Tween](../../assets/btwx-8.png)
+![Scramble text tween](../../assets/btwx-8.png)
 
 ## Supporting the full prototyping loop
 
@@ -103,9 +103,9 @@ These capabilities connect the main stages of the work: prepare the artwork, def
 
 > The prototype is both an editable system of states and a behavior that can be watched, discussed, and refined.
 
-![Device Framing](../../assets/btwx-12.png)
+![Device framing](../../assets/btwx-12.png)
 
-![Screen Recording](../../assets/btwx-13.png)
+![Screen recording](../../assets/btwx-13.png)
 
 ## The implementation behind the workflow
 

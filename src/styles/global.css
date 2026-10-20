@@ -245,6 +245,13 @@
     var(--color-green-100)
   );
 
+  --gradient-next-100: linear-gradient(
+    to bottom right,
+    var(--color-fuchsia-100),
+    var(--color-violet-100),
+    var(--color-cyan-100)
+  );
+
   --gradient-btwx-200: linear-gradient(
     to bottom right,
     var(--color-blue-200),
@@ -273,32 +280,46 @@
     var(--color-green-200)
   );
 
+  --gradient-next-200: linear-gradient(
+    to bottom right,
+    var(--color-fuchsia-200),
+    var(--color-violet-200),
+    var(--color-cyan-200)
+  );
+
   --gradient-btwx-800: linear-gradient(
     to bottom right,
-    var(--color-blue-800),
-    var(--color-purple-800),
-    var(--color-red-800)
+    var(--color-blue-600),
+    var(--color-purple-600),
+    var(--color-red-600)
   );
 
   --gradient-caffeine-800: linear-gradient(
     to bottom right,
-    var(--color-orange-800),
-    var(--color-pink-800),
-    var(--color-purple-800)
+    var(--color-orange-600),
+    var(--color-pink-600),
+    var(--color-purple-600)
   );
 
   --gradient-twitch-800: linear-gradient(
     to top left,
-    var(--color-green-800),
-    var(--color-blue-800),
-    var(--color-purple-800)
+    var(--color-green-600),
+    var(--color-blue-600),
+    var(--color-purple-600)
   );
 
   --gradient-figma-800: linear-gradient(
     to top left,
-    var(--color-red-800),
-    var(--color-yellow-800),
-    var(--color-green-800)
+    var(--color-red-600),
+    var(--color-yellow-600),
+    var(--color-green-600)
+  );
+
+  --gradient-next-800: linear-gradient(
+    to bottom right,
+    var(--color-fuchsia-600),
+    var(--color-violet-600),
+    var(--color-cyan-600)
   );
 
 	/* Shadows */
