@@ -49,7 +49,7 @@ These groups share a recurring interaction pattern: start with something recogni
 
 ## Making 3D a design operation
 
-**[Make-it-3d](https://www.figma.com/community/plugin/1548298598841033242)** extrudes text, shapes, and vectors into still or animated renders, with controls for extrusion and materials. Presets such as gold, glass, and liquid provide starting points for different visual treatments.
+**[Make It 3d](https://www.figma.com/community/plugin/1548298598841033242)** extrudes text, shapes, and vectors into still or animated renders, with controls for extrusion and materials. Presets such as gold, glass, and liquid provide starting points for different visual treatments.
 
 Its central interaction begins with artwork a designer already has. A flat shape becomes the input to a process that introduces depth, surface, and motion. This connects 3D rendering to an existing design decision: the form of the original text or vector.
 
@@ -85,11 +85,11 @@ Across these tools, the interface exposes the parts of a scene that directly inf
 
 Three more plugins explore image creation through systems and transformations.
 
-**[Flow-field](https://www.figma.com/community/plugin/1539673084873861127)** generates static and animated flow fields using React and p5.js. It brings a generative art process into the design workflow. The output is a composition produced through a system of motion and marks.
+**[Flow Field](https://www.figma.com/community/plugin/1539673084873861127)** generates static and animated flow fields using React and p5.js. It brings a generative art process into the design workflow. The output is a composition produced through a system of motion and marks.
 
-**[Fancy-gradient](https://www.figma.com/community/plugin/1538977604702923026)**, built with React, generates animated and still mesh gradients. Its subject is abstract color and transition, producing imagery that can support a composition as a background or become its main visual element.
+**[Fancy Gradient](https://www.figma.com/community/plugin/1538977604702923026)**, built with React, generates animated and still mesh gradients. Its subject is abstract color and transition, producing imagery that can support a composition as a background or become its main visual element.
 
-**[Kaleidoscope](https://www.figma.com/community/plugin/1537795176771571920)**, also built with React, transforms selected layers into [kaleidoscope](https://www.figma.com/community/plugin/1537795176771571920) stills and videos. Because the input comes from selected artwork, the effect can retain a visible connection to the designer’s original colors and forms while reorganizing them into a new pattern.
+**[Kaleidoscope](https://www.figma.com/community/plugin/1537795176771571920)**, also built with React, transforms selected layers into kaleidoscope stills and videos. Because the input comes from selected artwork, the effect can retain a visible connection to the designer’s original colors and forms while reorganizing them into a new pattern.
 
 These projects offer three different entry points: generate a field, compose a gradient, or transform existing artwork. Together, they show how procedural tools can support both discovery and intentional reuse.
 
@@ -99,23 +99,23 @@ These projects offer three different entry points: generate a field, compose a g
 
 The geographic plugins translate structured geographic data into vectors designers can use in a composition. All three are built with React, D3, and TopoJSON.
 
-**[Geo-globe](https://www.figma.com/community/plugin/1537088302250187086)** generates globe vectors in 14 projections, with optional countries, graticules, and outlines. Projection is a central design choice here: it determines how the globe is represented, while the optional layers control the amount of geographic detail in the result.
+**[Geo Globe](https://www.figma.com/community/plugin/1537088302250187086)** generates globe vectors in 14 projections, with optional countries, graticules, and outlines. Projection is a central design choice here: it determines how the globe is represented, while the optional layers control the amount of geographic detail in the result.
 
-**[Geo-country](https://www.figma.com/community/plugin/1535257934565097912)** generates Mercator projection vectors for every continent and country. It provides a more geographically focused route into the same general task: getting the relevant region into a design as vector artwork.
+**[Geo Country](https://www.figma.com/community/plugin/1535257934565097912)** generates Mercator projection vectors for every continent and country. It provides a more geographically focused route into the same general task: getting the relevant region into a design as vector artwork.
 
-**[Geo-usa](https://www.figma.com/community/plugin/1536332734310839855)**, supports Mercator and Albers USA projections, from the national outline down to individual counties. Its range of geographic detail supports compositions at different scales, from a national overview to a local area.
+**[Geo Usa](https://www.figma.com/community/plugin/1536332734310839855)**, supports Mercator and Albers USA projections, from the national outline down to individual counties. Its range of geographic detail supports compositions at different scales, from a national overview to a local area.
 
 > The map becomes part of the composition, with its projection and level of detail made explicit.
 
 ![Geo globe, country, and usa outputs](../../assets/figma-6.png)
 
-**[Add-a-map](https://github.com/madebyerik/add-a-map)** explores another route: inserting customizable static satellite and road maps through the Google Maps API. Built with React, the project remains an experiment because I chose not to fund the API costs. It belongs in this collection as an implementation experiment whose distribution was constrained by ongoing service costs.
+**[Add A Map](https://github.com/madebyerik/add-a-map)** explores another route: inserting customizable static satellite and road maps through the Google Maps API. Built with React, the project remains an experiment because I chose not to fund the API costs. It belongs in this collection as an implementation experiment whose distribution was constrained by ongoing service costs.
 
 ## Supporting the everyday work of design
 
 The utility projects focus on recurring tasks: setting up colors, bringing data into layouts, visualizing information, and understanding the structure of a document.
 
-**[Tailwind-colors](https://www.figma.com/community/plugin/1534889312476683727)** adds the full default Tailwind CSS color palette and a curated set of multi-stop gradients as document color and paint styles. It connects a predefined palette to reusable styles inside the document.
+**[Tailwind Colors](https://www.figma.com/community/plugin/1534889312476683727)** adds the full default Tailwind CSS color palette and a curated set of multi-stop gradients as document color and paint styles. It connects a predefined palette to reusable styles inside the document.
 
 **[UI Palette Generator](https://www.figma.com/community/plugin/1512101541165533169)** starts from a single primary color and generates light and dark UI palettes, including shades, hover states, backgrounds, and text colors. Built with React, Tailwind, and chroma.js, the tool is designed to support accessible contrast and readability across related interface colors.
 
@@ -145,7 +145,7 @@ Several widgets use familiar social and productivity patterns to create shared o
 
 **[Figbook](https://www.figma.com/community/widget/1531232954323563272)** is a Facebook-inspired feed with text, status, photo, event, swatch, and poll post options. It adapts a recognizable publishing model to canvas content. The variety of post types lets the feed contain both conversational material and design-related content, such as color swatches.
 
-**[What-to-do](https://www.figma.com/community/widget/1527650663236665460)** is a simple, stylish to-do list widget. Its scope is deliberately compact: give tasks a visible place alongside the work.
+**[What To Do](https://www.figma.com/community/widget/1527650663236665460)** is a simple, stylish to-do list widget. Its scope is deliberately compact: give tasks a visible place alongside the work.
 
 **[Fighub](https://www.figma.com/community/widget/1529088386995176266)**, brings a Git-inspired commit model into the design workflow. It supports commit messages, diffs, user data, timestamps, and location metadata. These details frame a change as a record with context: what changed, who recorded it, when it happened, and where it belongs. Its described scope is a commit-based record of design changes; claims about branching, merging, or restoration would require additional evidence.
 
@@ -173,9 +173,9 @@ The entertainment projects explore what happens when the canvas supports activit
 
 ## Reach and what it tells me
 
-As of October 20, 2026, the collection totals **15,345 users across 25 published plugins and widgets**, based on the individual project counts. The collection also includes two infrastructure-dependent experiments: [Add-a-map](https://github.com/madebyerik/add-a-map) and [WoW Armory](https://github.com/madebyerik/wow-armory). Users may overlap across projects, so the total is not a count of unique people.
+As of October 20, 2026, the collection totals **15,345 users across 25 published plugins and widgets**, based on the individual project counts. The collection also includes two infrastructure-dependent experiments: [Add A Map](https://github.com/madebyerik/add-a-map) and [WoW Armory](https://github.com/madebyerik/wow-armory). Users may overlap across projects, so the total is not a count of unique people.
 
-The largest audiences are [Make-it-3d](https://www.figma.com/community/plugin/1548298598841033242) with **2,800 users**, [Figbook](https://www.figma.com/community/widget/1531232954323563272) with **1,800**, [What-to-do](https://www.figma.com/community/widget/1527650663236665460) with **1,600**, and [Simple Data Viz](https://www.figma.com/community/plugin/1522926699597225864) with **1,300**.
+The largest audiences are [Make It 3d](https://www.figma.com/community/plugin/1548298598841033242) with **2,800 users**, [Figbook](https://www.figma.com/community/widget/1531232954323563272) with **1,800**, [What To Do](https://www.figma.com/community/widget/1527650663236665460) with **1,600**, and [Simple Data Viz](https://www.figma.com/community/plugin/1522926699597225864) with **1,300**.
 
 That spread includes 3D creation, social interaction, task management, and visualization. It shows adoption across several kinds of tools, from expressive generators to everyday utilities. Frequency of use, satisfaction, and time saved would need different evidence.
 
@@ -183,7 +183,7 @@ That spread includes 3D creation, social interaction, task management, and visua
 
 Across the collection, the same design problem appears in different forms: how do you turn a technical capability into an interaction someone can understand and use?
 
-For a rendering plugin, that means connecting material, lighting, and motion controls to a visible result. For a geographic tool, it means making projection and detail meaningful choices. For a [document audit](https://www.figma.com/community/widget/1519387347885061718), it means organizing structural information into something inspectable. For a widget, it means making an object on the canvas communicate what it does.
+For a rendering plugin, that means connecting material, lighting, and motion controls to a visible result. For a geographic tool, it means making projection and detail meaningful choices. For a document audit, it means organizing structural information into something inspectable. For a widget, it means making an object on the canvas communicate what it does.
 
 The technical range follows those needs: Three.js and React Three Fiber for 3D experiences, p5.js for generative imagery, D3 and TopoJSON for geography, Phaser for a pet simulator, and js-dos for Doom. The collection brings those capabilities into focused interfaces within a shared design environment.
 

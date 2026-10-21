@@ -2,6 +2,8 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import WorkDetailHeader from '../../components/WorkDetailHeader.astro';
+import WorkCard from "../../components/WorkCard.astro";
+import Grid from '../../components/Grid.astro';
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -15,7 +17,16 @@ export async function getStaticPaths() {
 	}));
 }
 
+const projects = (await getCollection('work'))
+	.sort((a, b) => a.data.index - b.data.index);
+
 const { entry } = Astro.props;
+const currentIndex = projects.findIndex((item) => item.id === entry.id);
+const nextIndex = currentIndex + 1 >= projects.length ? 0 : currentIndex + 1;
+const prevIndex = currentIndex - 1 < 0 ? projects.length - 1 : currentIndex - 1;
+const prevProject = projects[prevIndex];
+const nextProject = projects[nextIndex];
+
 const { Content } = await render(entry);
 ---
 
@@ -25,6 +36,12 @@ const { Content } = await render(entry);
 			<WorkDetailHeader project={entry} />
 			<div class:list={['prose', `prose--${entry.id}`]}>
 				<Content />
+			</div>
+			<div class="stack gap-6 md:gap-8">
+				<Grid>
+					<WorkCard project={nextProject} />
+					<WorkCard project={prevProject} />
+				</Grid>
 			</div>
 		</div>
 	</div>
