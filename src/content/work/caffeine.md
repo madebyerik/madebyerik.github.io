@@ -3,14 +3,12 @@ category: Deep Dive
 title: Caffeine.tv
 index: 1
 img: ../../assets/caffeine-placeholder.png
-img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+img_alt: Caffeine live host UI
+description: Helping Caffeine creators turn live Fox content into their own shows.
 tags:
-  - Tag 1
-  - Tag 2
-  - Tag 3
-  - Tag 4
-  - Tag 5
+  - Product Design
+  - Live Streaming
+  - Creator Tools
 ---
 
 ## Turning live programming into creator-led experiences

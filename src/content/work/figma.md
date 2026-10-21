@@ -3,14 +3,21 @@ category: Deep Dive
 title: Figma Plugins
 index: 3
 img: ../../assets/figma-placeholder.webp
-img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+img_alt: Thronglett plugin UI
+description: Figma plugins and widgets for design, creativity, and play.
 tags:
-  - Tag 1
-  - Tag 2
-  - Tag 3
-  - Tag 4
-  - Tag 5
+  - Figma
+  - Product Design
+  - Creative Coding
+  - React
+  - Three
+  - D3
+  - P5
+  - Phaser
+  - Puppeteer
+  - Express
+  - js-dos
+  - Font-End
 ---
 
 ## Building tools for utility, expression, and play

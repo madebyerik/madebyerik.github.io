@@ -3,14 +3,13 @@ category: Deep Dive
 title: Twitch.tv
 index: 2
 img: ../../assets/twitch-placeholder.webp
-img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+img_alt: Twitch in-player recommendation UI
+description: Designing Twitch’s first in-player recommendations.
 tags:
-  - Tag 1
-  - Tag 2
-  - Tag 3
-  - Tag 4
-  - Tag 5
+  - UX/UI
+  - Interaction Design
+  - Front-End
+  - Content Discovery
 ---
 
 ## Designing what happens when the stream ends

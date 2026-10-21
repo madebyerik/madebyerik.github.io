@@ -3,17 +3,17 @@ category: Deep Dive
 title: Btwx
 index: 0
 img: ../../assets/btwx-3.png
-img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc.
+img_alt: Btwx tween UI
+description: An animation and prototyping tool for product designers.
 tags:
-  - Tag 1
-  - Tag 2
-  - Tag 3
-  - Tag 4
-  - Tag 5
-  - Tag 6
-  - Tag 7
-  - Tag 8
+  - Product Design
+  - Prototyping
+  - Animation
+  - Desktop App
+  - Electron
+  - React
+  - Sass
+  - Font-End
 ---
 
 ## Designing the space between states

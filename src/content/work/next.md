@@ -3,17 +3,14 @@ category: Deep Dive
 title: Next
 index: 5
 img: ../../assets/next-3.png
-img_alt: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-description: Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc.
+img_alt: Next spec UI
+description: Export Sketch designs as HTML with specs, notes, and assets.
 tags:
-  - Tag 1
-  - Tag 2
-  - Tag 3
-  - Tag 4
-  - Tag 5
-  - Tag 6
-  - Tag 7
-  - Tag 8
+  - Sketch Plugin
+  - Developer Handoff
+  - React
+  - Sass
+  - Front-End
 ---
 
 ## Turning Sketch designs into browser-ready handoffs
