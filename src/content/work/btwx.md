@@ -13,7 +13,7 @@ tags:
   - Electron
   - React
   - Sass
-  - Font-End
+  - Front-End
 ---
 
 ## Designing the space between states

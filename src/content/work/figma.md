@@ -17,7 +17,7 @@ tags:
   - Puppeteer
   - Express
   - js-dos
-  - Font-End
+  - Front-End
 ---
 
 ## Building tools for utility, expression, and play
