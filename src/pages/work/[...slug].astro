@@ -31,15 +31,6 @@ const { Content } = await render(entry);
 </Layout>
 
 <style>
-	.prose {
-		/* background: white;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.1); */
-		border-radius: 2rem;
-		/* padding: 0 0.75rem; */
-		/* margin: 0 auto;
-		max-width: 720px; */
-	}
-
 	.prose :global(p),
 	.prose :global(ul),
 	.prose :global(ol),
@@ -63,16 +54,6 @@ const { Content } = await render(entry);
 		font-size: clamp(1rem, 0.85rem + 0.6vw, 1.25rem);
   	line-height: 1.5;
 	}
-
-	/* .prose :global(ul),
-	.prose :global(ol) {
-		padding-inline-start: 2rem;
-	}
-
-	.prose :global(ul) :global(li),
-	.prose :global(ol) :global(li) {
-		padding-left: 0.5rem;
-	} */
 
 	/* .prose :global(ul) :global(li) {
 		list-style-image: url('data:image/svg+xml,<svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="3.5" cy="4.5" r="3.5" fill="black"/><circle cx="4.5" cy="3.5" r="3" fill="white" stroke="black"/></svg>');
@@ -240,10 +221,6 @@ const { Content } = await render(entry);
 	}
 
   @media (min-width: 48rem) {
-    .prose {
-			/* padding: 0 1.5rem; */
-		}
-
 		.prose :global(p):has(img) {
 			padding: 2rem 2rem 2rem 2.35rem;
 			border-radius: 1.5rem;
