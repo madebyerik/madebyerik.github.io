@@ -34,7 +34,7 @@ The collection combines interface design with implementation across React, Three
 
 ## A collection with two kinds of presence
 
-Plugins and widgets provide different ways to participate in a design workflow. In this collection, plugins generally support a focused action: generate a chart, render an object, insert geographic vectors, or populate a design. Widgets give an interaction a place on the canvas: a to-do list, a social feed, a [document audit](https://www.figma.com/community/widget/1519387347885061718), or a small game.
+Plugins and widgets provide different ways to participate in a design workflow. In this collection, plugins generally support a focused action: generate a chart, render an object, insert geographic vectors, or populate a design. Widgets give an interaction a place on the canvas: a to-do list, a social feed, a document audit, or a small game.
 
 That difference shapes the work. A generator needs to make the relationship between settings and output understandable. A canvas widget needs to communicate its purpose through the object itself, including what someone can read, change, or interact with.
 

@@ -117,7 +117,7 @@ Next belongs to an earlier period of design handoff, before Figma’s rise made 
 
 Its starting point was a Sketch document. Its destination was a browser. The plugin created a bridge between them by exporting the information a developer needed into a portable format.
 
-Years later, Figma introduced Dev Mode on June 21, 2023, as a workspace designed to help developers move from design toward implementation. That provides a useful historical comparison for Next’s focus on inspection, specifications, and implementation context. [Figma’s Dev Mode announcement](https://www.figma.com/blog/introducing-dev-mode/)
+Years later, Figma introduced Dev Mode on June 21, 2023, as a workspace designed to help developers move from design toward implementation. That provides a useful historical comparison for Next’s focus on inspection, specifications, and implementation context.
 
 The approaches differ in delivery. Next produces an exported snapshot that can be shared as a folder. Figma’s Dev Mode places developer tooling inside a shared design environment.
 
