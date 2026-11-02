@@ -2,8 +2,7 @@
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import WorkDetailHeader from '../../components/WorkDetailHeader.astro';
-import WorkCard from "../../components/WorkCard.astro";
-import Grid from '../../components/Grid.astro';
+import MoreWork from "../../components/MoreWork.astro";
 
 interface Props {
 	entry: CollectionEntry<'work'>;
@@ -37,12 +36,7 @@ const { Content } = await render(entry);
 			<div class:list={['prose', `prose--${entry.id}`]}>
 				<Content />
 			</div>
-			<div class="stack gap-6 md:gap-8">
-				<Grid>
-					<WorkCard project={nextProject} />
-					<WorkCard project={prevProject} />
-				</Grid>
-			</div>
+			<MoreWork currentId={entry.id} />
 		</div>
 	</div>
 </Layout>

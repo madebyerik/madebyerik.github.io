@@ -1,0 +1,141 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import WorkCard from "./WorkCard.astro";
+import Grid from './Grid.astro';
+import AllWorkButton from './AllWorkButton.astro';
+
+interface Props {
+  currentId: string;
+}
+
+const { currentId } = Astro.props;
+
+const projects = (await getCollection('work'))
+  .sort((a, b) => a.data.index - b.data.index);
+
+const currentIndex = projects.findIndex(
+  (project) => project.id === currentId
+);
+
+// const prevProject =
+//   projects[(currentIndex - 1 + projects.length) % projects.length];
+
+const nextProject =
+  projects[(currentIndex + 1) % projects.length];
+---
+
+<div class="stack gap-6 md:gap-8">
+  <div class="mw__divider">
+    <div class:list={['mw__border', `mw__border--${currentId}`]}></div>
+    <div class:list={['mw__end', `mw__end--${currentId}`]}>
+      <svg
+        viewBox="0 0 112 36"
+        role="img"
+        aria-label={`End`}>
+        <text x="58" y="22"
+          text-anchor="middle" dominant-baseline="middle">
+          End
+        </text>
+      </svg>
+    </div>
+  </div>
+  <h2 class="mw__header">More Work</h2>
+  <div class="stack gap-8 md:gap-14">
+    <Grid>
+      <WorkCard project={nextProject} />
+      <!-- <WorkCard project={prevProject} /> -->
+    </Grid>
+    <AllWorkButton />
+  </div>
+</div>
+
+<style>
+  .mw__divider {
+    position: relative;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+  }
+
+  .mw__border {
+    height: 8px;
+    width: 100%;
+    background: red;
+    -webkit-mask-image: radial-gradient(circle, #000 40%, transparent 45%);
+    mask-image: radial-gradient(circle, #000 40%, transparent 45%);
+    -webkit-mask-size: 16px 8px;
+    mask-size: 16px 8px;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+  }
+  
+  .mw__end {
+    position: absolute;
+    background: red;
+    border-radius: 1rem;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .mw__end--btwx,
+  .mw__border--btwx {
+		background: var(--gradient-btwx-200);
+	}
+
+	.mw__end--caffeine,
+  .mw__border--caffeine {
+		background: var(--gradient-caffeine-200);
+	}
+
+	.mw__end--twitch,
+  .mw__border--twitch {
+		background: var(--gradient-twitch-200);
+	}
+
+	.mw__end--figma,
+  .mw__border--figma {
+		background: var(--gradient-figma-200);
+	}
+
+	.mw__end--next,
+  .mw__border--next {
+		background-image: var(--gradient-next-200);
+	}
+
+  .mw__end svg {
+    display: block;
+    width: 6.5rem;
+    height: 3.5rem;
+    overflow: visible;
+  }
+
+  .mw__end svg text {
+    font-family: var(--font-family-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    fill: white;
+    stroke: black;
+    stroke-width: 2px;
+    paint-order: stroke fill;
+    letter-spacing: 0.25rem;
+    stroke-linejoin: round;
+    filter: drop-shadow(-1px 1px 0px rgba(0, 0, 0, 1));
+  }
+
+  .mw__header {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 1rem;
+  }
+
+  @media (min-width: 48rem) {
+		.mw__divider {
+      padding: 1.75rem 0;
+    }
+
+    .mw__end svg {
+      width: 7rem;
+      height: 4rem;
+    }
+  }
+</style>

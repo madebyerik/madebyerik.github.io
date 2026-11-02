@@ -12,6 +12,7 @@ import githubIcon from "../assets/github-icon.svg";
 import WorkCard from "../components/WorkCard.astro";
 import ContactCard from '../components/ContactCard.astro';
 import Grid from '../components/Grid.astro';
+import AllWorkButton from '../components/AllWorkButton.astro';
 
 
 const projects = (await getCollection('work'))
@@ -68,13 +69,7 @@ const projects = (await getCollection('work'))
 							<WorkCard project={project} />
 						))}
 					</Grid>
-					<div class="section__footer">
-						<a class="all-work-button" href="/work">
-							<span class="all-work-button__inner">
-								View All Work →
-							</span>
-						</a>
-					</div>
+					<AllWorkButton />
 				</div>
 				<div class="stack gap-8 md:gap-14">
 					<!-- contact -->
@@ -128,32 +123,6 @@ const projects = (await getCollection('work'))
 		line-height: 1.5;
 		font-family: var(--font-family-sans);
 		color: rgba(0,0,0,0.5);
-	}
-
-	.section__footer {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.all-work-button {
-		background: white;
-		box-shadow: 0 0 0 1px rgba(0,0,0,0.1), 0 0 10px 0 rgba(0,0,0,0.05);
-		padding: 0.75rem;
-		border-radius: 2.75rem;
-	}
-
-	.all-work-button__inner {
-		background: black;
-		color: white;
-		font-size: 1.25rem;
-		line-height: 1.5rem;
-		font-family: var(--font-family-sans);
-		text-decoration: none;
-		border-radius: 2.25rem;
-		padding: 1.5rem 2rem;
-		font-weight: bold;
-		display: inline-block;
 	}
 
 	@media (min-width: 48rem) {
