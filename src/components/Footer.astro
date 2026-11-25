@@ -2,7 +2,7 @@
 ---
 
 <footer class="footer">
-  <span>Designed by <i>me</i>. Built with <i>Astro</i>.</span>
+  <span>Designed by <i>me</i>. <a class="github" href="https://github.com/madebyerik/madebyerik.github.io" target="_blank">Built with <i>Astro</i>.</a></span>
 </footer>
 
 <style>
@@ -20,6 +20,39 @@
       font-family: var(--font-family-serif);
       font-style: italic;
       font-weight: bold;
+    }
+  }
+
+  .github {
+    position: relative;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important; 
+    color: transparent;
+    text-decoration: none;
+    background: linear-gradient(
+      to bottom right,
+      var(--color-fuchsia-600),
+      var(--color-pink-600),
+      var(--color-orange-600),
+      var(--color-yellow-600)
+    );
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      height: 2px;
+      width: 100%;
+      border-radius: 1px;
+      background: linear-gradient(
+        to bottom right,
+        var(--color-fuchsia-200),
+        var(--color-pink-200),
+        var(--color-orange-200),
+        var(--color-yellow-200)
+      );
     }
   }
 </style>
